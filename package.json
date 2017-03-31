@@ -1,0 +1,31 @@
+{
+  "name": "par-ui",
+  "version": "0.0.1",
+  "description": "Parmais React Components Library",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/par-mais-tecnologia/par-ui.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "library"
+  ],
+  "author": "Parmais Tecnologia",
+  "license": "(Apache-2.0)",
+  "bugs": {
+    "url": "https://github.com/par-mais-tecnologia/par-ui/issues"
+  },
+  "homepage": "https://github.com/par-mais-tecnologia/par-ui#readme",
+  "dependencies": {
+    "jest": "^19.0.2"
+  }
+}

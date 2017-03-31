@@ -1,13 +1,13 @@
 ![Logo][]
-# !Parmais React Components!
+# Parmais React Components
 
-- __Lead Maintainer:__ [Laucsen][Lead]
+- __Lead Maintainer:__ [Diego Laucsen][Lead]
 - __Sponsor:__ [Par Mais][Sponsor]
 - __Node:__ 6.x
 
 Main contributors:
-* [jhbalestrin]
-* [tiago-pereira]
+* [João Henrique Cizeski Balestrin][tiago-pereira]
+* [Tiago Pereira][tiago-pereira]
 
 This project contains a library of react components created by our team.
 
@@ -21,11 +21,13 @@ information on contribution please see our [Contributing][Contrib] guide.
 Copyright (c) 2017 Richard Rodger and other contributors;
 Licensed under __[Apache 2.0][Lic]__.
 
-[Lead]: https://github.com/(add-your-nickname-here)
+[Lead]: https://github.com/laucsen
+[jhbalestrin]: https://github.com/jhbalestrin
+[tiago-pereira]: https://github.com/tiago-pereira
 [Lic]: ./LICENSE
-[Logo]: ./par-mais-rect.png
+[Logo]: ./assets/par-mais-rect.png
 [Sponsor]: http://parmais.com.br
 [ParMaisTech]: http://parmais.com.br
 [Contrib]: ./CONTRIBUTE
-[Issue]: https://github.com/par-mais-tecnologia/par-ui par-ui/issues/new
-[Pull]: https://github.com/par-mais-tecnologia/par-ui par-ui/pulls
+[Issue]: https://github.com/par-mais-tecnologia/par-ui/issues/new
+[Pull]: https://github.com/par-mais-tecnologia/par-ui/pulls
