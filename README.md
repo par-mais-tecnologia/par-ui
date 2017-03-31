@@ -6,7 +6,7 @@
 - __Node:__ 6.x
 
 Main contributors:
-* [João Henrique Cizeski Balestrin][tiago-pereira]
+* [João Henrique Cizeski Balestrin][jhbalestrin]
 * [Tiago Pereira][tiago-pereira]
 
 This project contains a library of react components created by our team.
