@@ -9,10 +9,7 @@ Main contributors:
 * [jhbalestrin]
 * [tiago-pereira]
 
-
-This project contains a library of react components create by our team, in our projects.
-
-...
+This project contains a library of react components created by our team.
 
 ## Contributing
 The [Par Mais Tecnologia][ParMaisTech] encourages participation. If you feel you can help in any way, be
@@ -30,5 +27,5 @@ Licensed under __[Apache 2.0][Lic]__.
 [Sponsor]: http://parmais.com.br
 [ParMaisTech]: http://parmais.com.br
 [Contrib]: ./CONTRIBUTE
-[Issue]: https://github.com/par-mais-tecnologia/!project name!/issues/new
-[Pull]: https://github.com/par-mais-tecnologia/!project name!/pulls
+[Issue]: https://github.com/par-mais-tecnologia/par-ui par-ui/issues/new
+[Pull]: https://github.com/par-mais-tecnologia/par-ui par-ui/pulls
