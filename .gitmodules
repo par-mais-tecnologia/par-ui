@@ -1,0 +1,3 @@
+[submodule "examples/par-ui-example"]
+	path = examples/par-ui-example
+	url = https://github.com/par-mais-tecnologia/par-ui-example
