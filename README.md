@@ -11,6 +11,23 @@ Main contributors:
 
 This project contains a library of react components created by our team.
 
+
+## ESlint
+
+win
+
+```
+$ npm install -g install-peerdeps
+
+$ install-peerdeps --dev eslint-config-airbnb
+```
+
+linux/osx
+
+```
+npm info eslint-config-airbnb@latest peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add --dev eslint-config-airbnb@latest
+```
+
 ## Contributing
 The [Par Mais Tecnologia][ParMaisTech] encourages participation. If you feel you can help in any way, be
 it with bug reporting, documentation, examples, extra testing, or new features feel free

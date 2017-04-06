@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "stage-1",
+    "env",
+    "react"
+  ],
+  "env": {
+    "production": {
+      "presets": ["babili"]
+    }
+  }
+}
