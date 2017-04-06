@@ -12,7 +12,7 @@
     "dev:wds": "webpack-dev-server --progress",
     "dev:build": "rimraf build && yarn dev:babel && yarn dev:scss && yarn build:copy-files",
     "dev:babel": "babel src -d build --ignore .spec.js",
-    "dev:scss": "node-sass ./src/style/app.scss ./build/index.css",
+    "dev:scss": "node-sass ./src/style/css/index.css ./build/index.css",
     "prod:build": "rimraf build && yarn prod:babel && yarn prod:scss && yarn build:copy-files",
     "prod:babel": "cross-env BABEL_ENV=production babel src -d build --ignore .spec.js",
     "prod:scss": "node-sass ./src/style/index.css ./build/style/index.css --output-style compressed",

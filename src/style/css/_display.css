@@ -30,6 +30,7 @@
 .dib {             display: inline-block; }
 .dit {             display: inline-table; }
 .dt {              display: table; }
+.dif {              display: inline-flex; }
 .dtc {             display: table-cell; }
 .dt-row {          display: table-row; }
 .dt-row-group {    display: table-row-group; }

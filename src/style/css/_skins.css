@@ -44,6 +44,29 @@
 .near-white {    color: var(--near-white); }
 .white {         color: var(--white); }
 
+
+.lollipop-01 {         color: var(--lollipop-01); }
+.gum-01      {         color: var(--gum-01); }
+.caramel-01  {         color: var(--caramel-01); }
+.caramel-03  {         color: var(--caramel-03); }
+.kitkat-01   {         color: var(--kitkat-01); }
+.jelly-01    {         color: var(--jelly-01); }
+.cottoncandy-01 {         color: var(--cottoncandy-01); }
+.cottoncandy-02 {         color: var(--cottoncandy-02); }
+.cottoncandy-03 {         color: var(--cottoncandy-03); }
+.cottoncandy-04 {         color: var(--cottoncandy-04); }
+
+.gray-01 {         color: var(--gray-01); }
+.gray-02 {         color: var(--gray-02); }
+.gray-03 {         color: var(--gray-03); }
+.gray-04 {         color: var(--gray-04); }
+.gray-05 {         color: var(--gray-05); }
+.gray-06 {         color: var(--gray-06); }
+.gray-07 {         color: var(--gray-07); }
+
+
+
+
 .dark-red { color: var(--dark-red); }
 .red { color: var(--red); }
 .light-red { color: var(--light-red); }
@@ -134,3 +157,23 @@
 .bg-washed-yellow { background-color: var(--washed-yellow); }
 .bg-washed-red { background-color: var(--washed-red); }
 .bg-inherit { background-color: inherit; }
+
+
+.bg-lollipop-01 {         background-color: var(--lollipop-01); }
+.bg-gum-01      {         background-color: var(--gum-01); }
+.bg-caramel-01  {         background-color: var(--caramel-01); }
+.bg-caramel-03  {         background-color: var(--caramel-03); }
+.bg-kitkat-01   {         background-color: var(--kitkat-01); }
+.bg-jelly-01    {         background-color: var(--jelly-01); }
+.bg-cottoncandy-01 {         background-color: var(--cottoncandy-01); }
+.bg-cottoncandy-02 {         background-color: var(--cottoncandy-02); }
+.bg-cottoncandy-03 {         background-color: var(--cottoncandy-03); }
+.bg-cottoncandy-04 {         background-color: var(--cottoncandy-04); }
+
+.bg-gray-01 {         background-color: var(--gray-01); }
+.bg-gray-02 {         background-color: var(--gray-02); }
+.bg-gray-03 {         background-color: var(--gray-03); }
+.bg-gray-04 {         background-color: var(--gray-04); }
+.bg-gray-05 {         background-color: var(--gray-05); }
+.bg-gray-06 {         background-color: var(--gray-06); }
+.bg-gray-07 {         background-color: var(--gray-07); }

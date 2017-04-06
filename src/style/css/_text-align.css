@@ -22,19 +22,42 @@
 .tr  { text-align: right; }
 .tc  { text-align: center; }
 
+
+.p-ti-05  { text-indent: 0.5rem; }
+.p-ti-075 { text-indent: 0.75rem; }
+.p-ti-1   { text-indent: 1rem; }
+.p-ti-2   { text-indent: 2rem; }
+.p-ti-3   { text-indent: 3rem; }
+
+
 @media (--breakpoint-not-small) {
+  .p-ti-05-ns  { text-indent: 0.5rem; }
+  .p-ti-1-ns  { text-indent: 1rem; }
+  .p-ti-2-ns  { text-indent: 2rem; }
+  .p-ti-3-ns  { text-indent: 3rem; }
+
   .tl-ns  { text-align: left; }
   .tr-ns  { text-align: right; }
   .tc-ns  { text-align: center; }
 }
 
 @media (--breakpoint-medium) {
+  .p-ti-05-m  { text-indent: 0.5rem; }
+  .p-ti-1-m  { text-indent: 1rem; }
+  .p-ti-2-m  { text-indent: 2rem; }
+  .p-ti-3-m  { text-indent: 3rem; }
+
   .tl-m  { text-align: left; }
   .tr-m  { text-align: right; }
   .tc-m  { text-align: center; }
 }
 
 @media (--breakpoint-large) {
+  .p-ti-05-l  { text-indent: 0.5rem; }
+  .p-ti-1-l  { text-indent: 1rem; }
+  .p-ti-2-l  { text-indent: 2rem; }
+  .p-ti-3-l  { text-indent: 3rem; }
+
   .tl-l  { text-align: left; }
   .tr-l  { text-align: right; }
   .tc-l  { text-align: center; }
