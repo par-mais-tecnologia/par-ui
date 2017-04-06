@@ -12,6 +12,8 @@ Promise.all(
 )
 .then(() => createPackageFile());
 
+fse.copy('src/style/fonts/', 'build/style/fonts/', err => console.log(err));
+
 function copyFile(file) {
   const buildPath = resolveBuildPath(file);
   return new Promise((resolve) => {

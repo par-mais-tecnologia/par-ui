@@ -15,11 +15,11 @@
     "dev:scss": "node-sass ./src/style/css/index.css ./build/index.css",
     "prod:build": "rimraf build && yarn prod:babel && yarn prod:scss && yarn build:copy-files",
     "prod:babel": "cross-env BABEL_ENV=production babel src -d build --ignore .spec.js",
-    "prod:scss": "node-sass ./src/style/index.css ./build/style/index.css --output-style compressed",
+    "prod:scss": "node-sass ./src/style/css/index.css ./build/style/css/index.css --output-style compressed",
     "build:copy-files": "babel-node ./config/copy-files.js",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
-    "test": "yarn lint && jest --coverage",
-    "precommit": "yarn test"
+    "lint:fix": "eslint src webpack.config.babel.js --ext .js,.jsx --fix",
+    "test": "yarn lint && jest --coverage"
   },
   "repository": {
     "type": "git",
