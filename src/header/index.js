@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 class Header extends Component {
   render() {
     return (
-      <div className="h25 flex flex-row justify-between p-shadow-8 bb b--gray-01">
+      <div className="h25 flex flex-row justify-between p-shadow-8 bb b--gray-01 bg-white">
         <div className="flex flex-row pl3">
           {this.props.logo && <Link to={this.props.logoPath}>
             <img

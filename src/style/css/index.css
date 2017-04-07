@@ -50,7 +50,7 @@ body {
 @import './_flexbox';
 @import './_floats';
 @import './_font-family';
-@import './_font-import.css';
+@import './_font-import';
 @import './_font-style';
 @import './_font-weight';
 @import './_forms';
@@ -85,16 +85,16 @@ body {
 @import './_styles';
 
 /* Custom parmais style */
-@import './par-style/_par-type-scale.css';
-@import './par-style/_par-font-style.css';
-@import './par-style/_par-box-shadow.css';
-@import './par-style/_par-cursor.css';
-@import './par-style/_par-button-style.css';
-@import './par-style/_par-input-style.css';
-@import './par-style/_par-placeholder.css';
+@import './par-style/_par-type-scale';
+@import './par-style/_par-font-style';
+@import './par-style/_par-box-shadow';
+@import './par-style/_par-cursor';
+@import './par-style/_par-button-style';
+@import './par-style/_par-input-style';
+@import './par-style/_par-placeholder';
 
 /* Variables */
-/* Importing here will allow you to override any variables in the modules */
+/* Importing here will allow you to oerride any variables in the modules */
 @import './_colors';
 @import './_media-queries';
 

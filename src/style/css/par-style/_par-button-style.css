@@ -12,7 +12,6 @@
 
 /* Secondary button*/
 .button-secondary-background{
-    background: var(--white);
 }
 .button-secondary-background:hover{
     background: var(--cottoncandy-02);

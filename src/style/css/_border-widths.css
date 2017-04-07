@@ -21,6 +21,8 @@
 
 */
 
+.bw-1 { border-width: 1px; }
+
 .bw0 { border-width: 0; }
 .bw1 { border-width: .125rem; }
 .bw2 { border-width: .25rem; }

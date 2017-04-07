@@ -1,6 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 
 class TextInput extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.handleInputBlur = this.handleInputBlur.bind(this)
+    this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleInputFocus = this.handleInputFocus.bind(this)
+  }
+
+
   getStyle() {
     let inputStyle = 'roboto-regular gray-02 h2 p-f18 input-text-indent-12'
     let containerStyle = 'dif flex-column'
@@ -61,7 +71,7 @@ class TextInput extends Component {
       margin: '6px 0',
       height: '6px',
       width: '6px',
-      backgroundColor: this.props.requiredColor
+      backgroundColor: this.props.requiredColor || ''
     }
 
     const customSize = {
@@ -83,7 +93,11 @@ class TextInput extends Component {
           <span style={bulletStyle} />
           <span className={style.labelStyle}>{this.props.label}</span>
         </div>
-        <input {...inputProps} type={this.props.type} className={style.inputStyle} placeholder={this.props.placeholder} />
+        <input {...inputProps} 
+          type={this.props.type} 
+          className={style.inputStyle} 
+          placeholder={this.props.placeholder} />
+
         <span className={style.errorStyle}>{this.props.errorText}</span>
       </div>
     )
@@ -113,7 +127,6 @@ TextInput.propTypes = {
 TextInput.defaultProps = {
   label: 'Label',
   placeholder: 'Placeholder',
-  requiredColor: 'White',
   type: 'text'
 }
 
