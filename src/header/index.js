@@ -21,10 +21,10 @@ class Header extends Component {
         {this.props.isLogged &&
         <div className="flex flex-row pr3">
           <div className="h25 w25 pa2" />
-          <div className="p-f14 w4 roboto-regular gray-02 pt3">
-            {this.props.consultantName}
+          <div className="p-f14 roboto-regular gray-02 pt3">
+            {this.props.name}
           </div>
-          <div className="p-link pt3" onClick={this.props.onLogout}>
+          <div className="p-link pt3 ml3" onClick={this.props.onLogout}>
             {this.props.exitText}
           </div>
         </div>}
@@ -35,7 +35,7 @@ class Header extends Component {
 
 Header.propTypes = {
   label: React.PropTypes.string,
-  consultantName: React.PropTypes.string,
+  name: React.PropTypes.string,
   exitText: React.PropTypes.string,
   isLogged: React.PropTypes.bool,
   logoHeight: React.PropTypes.number,
@@ -47,8 +47,8 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  label: 'Investimentos',
-  consultantName: 'Consultant Name',
+  label: 'Label',
+  name: 'Name',
   exitText: 'Sair',
   isLogged: false,
   logoAlt: 'Default img alt',

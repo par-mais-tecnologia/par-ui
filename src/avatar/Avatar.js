@@ -81,17 +81,6 @@ class Avatar extends Component {
     };
   }
 
-  static propTypes = {
-    /** The backgroundColor of the avatar. Does not apply to image avatars.**/
-    backgroundColor: PropTypes.string,
-    /** The css class name of the root `div` or `img` element.**/
-    customClassName: PropTypes.string,
-    /** This is the size of the avatar in pixels. **/
-    size: PropTypes.number,
-    /** If passed in, this component will render an img element. Otherwise, a div will be rendered.**/
-    src: PropTypes.string,
-  };
-
   render() {
 
     const style = this.getStyle();
