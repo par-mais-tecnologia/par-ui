@@ -33,3 +33,7 @@
     outline: 0;
     text-indent:12px
 }
+
+.input-placeholder::placeholder {
+    color: var(--gray-05);
+}
