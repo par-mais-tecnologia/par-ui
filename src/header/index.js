@@ -32,7 +32,7 @@ class Header extends Component {
         </div>
         {isLogged &&
         <div className="flex flex-row pr3">
-          <Avatar initialLetter={name.substring(0,1)}/>
+          <Avatar initialLetter={name.substring(0,1).toUpperCase()}/>
           <div className="p-f14 roboto-regular gray-02 pt3">
             {name}
           </div>
@@ -73,4 +73,5 @@ function defaultLogout() {
 }
 
 export default Header
+
 
