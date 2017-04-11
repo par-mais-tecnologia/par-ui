@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-import Avatar from '../Avatar/avatar'
+import Avatar from '../avatar'
 
 class Header extends Component {
   render() {
