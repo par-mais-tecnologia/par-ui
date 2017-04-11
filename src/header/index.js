@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
+import Avatar from '../Avatar/avatar'
 
 class Header extends Component {
   render() {
@@ -13,7 +14,7 @@ class Header extends Component {
       exitText,
       onLogout
     } = this.props;
-    
+
     return (
       <div className="h25 flex flex-row justify-between p-shadow-8 bb b--gray-01 bg-white">
         <div className="flex flex-row pl3">
@@ -31,7 +32,7 @@ class Header extends Component {
         </div>
         {isLogged &&
         <div className="flex flex-row pr3">
-          <div className="h25 w25 pa2" />
+          <Avatar initialLetter={name.substring(0,1)}/>
           <div className="p-f14 roboto-regular gray-02 pt3">
             {name}
           </div>
