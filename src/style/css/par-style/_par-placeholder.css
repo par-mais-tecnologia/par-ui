@@ -2,15 +2,42 @@
 
 /*Parmais Custom placeholder styles */
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    text-indent:12px
+.placeholder::placeholder {
+    color: var(--gray-05);
+    text-indent: 12px;
 }
-::-moz-placeholder { /* Firefox 19+ */
-    text-indent:12px
+
+.placeholder::-webkit-input-placeholder {
+  color: var(--gray-05);
+  text-indent: 12px;
 }
-:-ms-input-placeholder { /* IE 10+ */
-    text-indent:12px
+
+.placeholder::-moz-placeholder {
+  color: var(--gray-05);
+  text-indent: 12px;
 }
-:-moz-placeholder { /* Firefox 18- */
-    text-indent:12px
+
+.placeholder::-ms-input-placeholder {
+  color: var(--gray-05);
+  text-indent: 12px;
+}
+
+.placeholder:placeholder {
+    color: var(--gray-05);
+    text-indent: 12px;
+}
+
+.placeholder:-webkit-input-placeholder {
+  color: var(--gray-05);
+  text-indent: 12px;
+}
+
+.placeholder:-moz-placeholder {
+  color: var(--gray-05);
+  text-indent: 12px;
+}
+
+.placeholder:-ms-input-placeholder {
+  color: var(--gray-05);
+  text-indent: 12px;
 }
