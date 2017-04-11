@@ -36,7 +36,7 @@ class Header extends Component {
           <div className="p-f14 roboto-regular gray-02 pt3">
             {name}
           </div>
-          <div className="p-link pt3 ml3" onClick={onLogout}>
+          <div className="p-link pt3 ml4" onClick={onLogout}>
             {exitText}
           </div>
         </div>}
@@ -61,7 +61,7 @@ Header.propTypes = {
 Header.defaultProps = {
   label: 'Label',
   name: 'Name',
-  exitText: 'Sair',
+  exitText: 'SAIR',
   isLogged: false,
   logoAlt: 'Default img alt',
   logoPath: '/',

@@ -27,7 +27,7 @@ class Avatar extends Component {
           height: '32px',
           width: '32px',
           margin: '6px',
-          padding:src?'':'2px 0 0 0'
+          padding: src ? '' :'0'
         };
         break;
       }
@@ -81,17 +81,6 @@ class Avatar extends Component {
     };
   }
 
-  static propTypes = {
-    /** The backgroundColor of the avatar. Does not apply to image avatars.**/
-    backgroundColor: PropTypes.string,
-    /** The css class name of the root `div` or `img` element.**/
-    customClassName: PropTypes.string,
-    /** This is the size of the avatar in pixels. **/
-    size: PropTypes.number,
-    /** If passed in, this component will render an img element. Otherwise, a div will be rendered.**/
-    src: PropTypes.string,
-  };
-
   render() {
 
     const style = this.getStyle();
@@ -109,8 +98,8 @@ class Avatar extends Component {
       );
     } else {
       return (
-        <div style={style.areaInlineStyle} className="dif flex-center-all" >
-          <span style={style.photoInlineStyle} className="br-100 ba b--gray-04 roboto-regular f3 white tc bg-gray-06">
+        <div style={style.areaInlineStyle} className="dif" >
+          <span style={style.photoInlineStyle} className="br-100 ba b--gray-04 roboto-regular f3 white tc bg-gray-06 flex justify-center items-center">
             {initialLetter}
           </span>
         </div>
