@@ -102,12 +102,12 @@ class TextInput extends Component {
           <span className={style.labelStyle}>{this.props.label}</span>
         </div>
 
-        <div className="mb3 flex flex-column">
+        <div className="flex flex-column">
           <input {...inputProps} 
             type={this.props.type} 
             className={style.inputStyle} 
             placeholder={this.props.placeholder} />
-          {this.props.errorText && <span className={style.errorStyle}>{this.props.errorText}</span>}
+          <span className={style.errorStyle}>{this.props.errorText}</span>
         </div>
       </div>
     )
