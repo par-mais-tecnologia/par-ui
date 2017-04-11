@@ -1,31 +1,42 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 
 class Header extends Component {
   render() {
+    const {
+      logo,
+      logoPath,
+      logoAlt,
+      label,
+      isLogged,
+      name,
+      exitText,
+      onLogout
+    } = this.props;
+    
     return (
       <div className="h25 flex flex-row justify-between p-shadow-8 bb b--gray-01 bg-white">
         <div className="flex flex-row pl3">
-          {this.props.logo && <Link to={this.props.logoPath}>
+          {logo && <Link to={logoPath}>
             <img
               className="h25 w4 pointer"
-              src={this.props.logo}
-              alt={this.props.logoAlt}
+              src={logo}
+              alt={logoAlt}
             />
           </Link>}
-          {(!this.props.logo) && <div className="h25 w4" />}
+          {(!logo) && <div className="h25 w4" />}
           <div className="roboto-light gray-01 p-f18 pt3">
-            {this.props.label}
+            {label}
           </div>
         </div>
-        {this.props.isLogged &&
+        {isLogged &&
         <div className="flex flex-row pr3">
           <div className="h25 w25 pa2" />
           <div className="p-f14 roboto-regular gray-02 pt3">
-            {this.props.name}
+            {name}
           </div>
-          <div className="p-link pt3 ml3" onClick={this.props.onLogout}>
-            {this.props.exitText}
+          <div className="p-link pt3 ml3" onClick={onLogout}>
+            {exitText}
           </div>
         </div>}
       </div>
@@ -34,15 +45,15 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  label: React.PropTypes.string,
-  name: React.PropTypes.string,
-  exitText: React.PropTypes.string,
-  isLogged: React.PropTypes.bool,
-  logoHeight: React.PropTypes.number,
-  logoWidth: React.PropTypes.number,
-  logo: React.PropTypes.string,
-  logoAlt: React.PropTypes.string,
-  logoPath: React.PropTypes.string,
+  label: PropTypes.string,
+  name: PropTypes.string,
+  exitText: PropTypes.string,
+  isLogged: PropTypes.bool,
+  logoHeight: PropTypes.number,
+  logoWidth: PropTypes.number,
+  logo: PropTypes.string,
+  logoAlt: PropTypes.string,
+  logoPath: PropTypes.string,
 
 }
 
@@ -54,12 +65,11 @@ Header.defaultProps = {
   logoAlt: 'Default img alt',
   logoPath: '/',
   onLogout: defaultLogout
-
-
 }
 
 function defaultLogout() {
   console.log('No logout function defined.')
 }
+
 export default Header
 
