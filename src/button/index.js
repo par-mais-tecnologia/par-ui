@@ -1,22 +1,28 @@
-import React, { Component } from 'react'
-
+import React, { Component, PropTypes } from 'react'
 
 class Button extends Component {
 
   getButtonStyle() {
+    const {
+      disabled,
+      primary,
+      secondary,
+      customClassName
+    } = this.props;
+
     const defaultStyle = 'word-wrap h2 ph3 roboto-regular dif p-f12 justify-around items-center overflow-hidden'
     let style = ''
 
-    if (this.props.disabled) {
+    if (disabled) {
       style = 'button-disabled-background gray-04 cursor-disabled'
-    } else if (this.props.primary) {
+    } else if (primary) {
       style = 'button-primary-background white b--cottoncandy-02 bb'
-    } else if (this.props.secondary) {
+    } else if (secondary) {
       style = 'button-secondary-background button-secondary-color button-secondary-border'
     }
 
-    if (this.props.customClassName) {
-      style = style.concat(' ', this.props.customClassName)
+    if (customClassName) {
+      style = style.concat(' ', customClassName)
     }
 
     return style.concat(' ', defaultStyle)
@@ -38,14 +44,14 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-  primary: React.PropTypes.bool,
-  secondary: React.PropTypes.bool,
-  disabled: React.PropTypes.bool,
-  label: React.PropTypes.string,
-  onClick: React.PropTypes.func,
-  height: React.PropTypes.number,
-  width: React.PropTypes.number,
-  customClassName: React.PropTypes.string,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
+  onClick: PropTypes.func,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  customClassName: PropTypes.string,
 }
 
 Button.defaultProps = {
