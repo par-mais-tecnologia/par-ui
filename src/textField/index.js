@@ -8,6 +8,7 @@ class TextInput extends Component {
     this.handleInputBlur = this.handleInputBlur.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
     this.handleInputFocus = this.handleInputFocus.bind(this)
+    this.handleKeyUp = this.handleKeyUp.bind(this)
   }
 
 
@@ -53,6 +54,12 @@ class TextInput extends Component {
     }
   }
 
+  handleKeyUp(event) {
+    if (this.props.onKeyUp) {
+      this.props.onKeyUp(event)
+    }
+  }
+
   handleInputChange(event) {
     if (this.props.onChange) {
       this.props.onChange(event, event.target.value)
@@ -83,6 +90,7 @@ class TextInput extends Component {
       onBlur: this.handleInputBlur,
       onChange: this.handleInputChange,
       onFocus: this.handleInputFocus,
+      onKeyUp: this.handleKeyUp,
       value: this.props.value
     }
 
@@ -93,12 +101,14 @@ class TextInput extends Component {
           <span style={bulletStyle} />
           <span className={style.labelStyle}>{this.props.label}</span>
         </div>
-        <input {...inputProps} 
-          type={this.props.type} 
-          className={style.inputStyle} 
-          placeholder={this.props.placeholder} />
 
-        <span className={style.errorStyle}>{this.props.errorText}</span>
+        <div className="mb3 flex flex-column">
+          <input {...inputProps} 
+            type={this.props.type} 
+            className={style.inputStyle} 
+            placeholder={this.props.placeholder} />
+          {this.props.errorText && <span className={style.errorStyle}>{this.props.errorText}</span>}
+        </div>
       </div>
     )
   }
@@ -122,6 +132,7 @@ TextInput.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
+  onKeyUp: PropTypes.func
 }
 
 TextInput.defaultProps = {
