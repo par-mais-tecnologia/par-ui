@@ -11,6 +11,11 @@
 }
 
 @font-face {
+    font-family: 'Brandon Bold';
+    src: url('../fonts/Brandon_bld.otf');
+}
+
+@font-face {
     font-family: 'Roboto Light';
     src: url('../fonts/Roboto-Light.ttf');
 }

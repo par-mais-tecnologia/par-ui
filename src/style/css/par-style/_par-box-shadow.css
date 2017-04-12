@@ -2,20 +2,21 @@
  PARMAIS CUSTOM BOX-SHADOW
  */
 
+.p-shadow-1-strong { box-shadow: 0px 0px 20px 2px rgba( 0, 0, 0, 0.2 ); }
 .p-shadow-8 { box-shadow: 0px 0px 8px 0px rgba(184,184,184,1); }
-
 
 @media (--breakpoint-not-small) {
   .p-shadow-8-ns { box-shadow: 0px 0px 8px 0px rgba(184,184,184,1); }
-
+  .p-shadow-1-strong-ns { box-shadow: 0px 0px 20px 2px rgba( 0, 0, 0, 0.2 ); }
 }
 
 @media (--breakpoint-medium) {
-  p-shadow-8-m { box-shadow: 0px 0px 8px 0px rgba(184,184,184,1); }
-
+  .p-shadow-8-m { box-shadow: 0px 0px 8px 0px rgba(184,184,184,1); }
+  .p-shadow-1-strong-m { box-shadow: 0px 0px 20px 2px rgba( 0, 0, 0, 0.2 ); }
 }
 
 @media (--breakpoint-large) {
   .p-shadow-8-l { box-shadow: 0px 0px 8px 0px rgba(184,184,184,1); }
-
+  .p-shadow-1-strong-l { box-shadow: 0px 0px 20px 2px rgba( 0, 0, 0, 0.2 ); }
 }
+

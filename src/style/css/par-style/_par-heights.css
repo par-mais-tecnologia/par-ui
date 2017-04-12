@@ -1,0 +1,24 @@
+/* Heigh without header */
+.h-w-header {
+  height: calc(100% - 48px)
+}
+
+/* Height Scale */
+
+.h25{ height: 3rem; }
+
+/* Height Percentages - Based off of height of parent */
+
+.-inherit {  height: inherit; }
+
+@media (--breakpoint-not-small) {
+  .h25-ns{ height: 3rem; }
+}
+
+@media (--breakpoint-medium) {
+  .h25-m{ height: 3rem; }
+}
+
+@media (--breakpoint-large) {
+  .h25-l{ height: 3rem; }
+}
