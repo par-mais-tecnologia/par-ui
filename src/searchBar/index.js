@@ -3,6 +3,16 @@ import Magnifier from "../icons/magnifier"
 
 class SearchBar extends Component {
 
+
+  constructor(props){
+    super(props)
+
+    this.handleInputBlur = this.handleInputBlur.bind(this)
+    this.handleInputChange = this.handleInputChange.bind(this)
+    this.handleInputFocus = this.handleInputFocus.bind(this)
+  }
+
+
   componentWillMount() {
     this.setState({
       isFocused: false,
@@ -37,23 +47,25 @@ class SearchBar extends Component {
     };
   }
 
-  handleInputBlur = (event) => {
+  handleInputBlur(event){
     this.setState({isFocused: false});
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
-  };
-  handleInputChange = (event) => {
+  }
+  
+  handleInputChange(event){
     if (this.props.onChange) {
       this.props.onChange(event, event.target.value);
     }
-  };
-  handleInputFocus = (event) => {
+  }
+
+  handleInputFocus(event){
     this.setState({isFocused: true});
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
-  };
+  }
 
   render() {
     const {type, placeholder, value, width, height} = this.props;
