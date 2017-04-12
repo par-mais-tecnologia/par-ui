@@ -72,7 +72,7 @@ class SearchBar extends Component {
 
     const customSize = {
       width: width,
-      height:height
+      height: height
     }
 
     const inputProps = {
@@ -90,7 +90,7 @@ class SearchBar extends Component {
     return (
       <div style={customSize} className={containerStyle}>
         <input {...inputProps} style={{ height:'38px', width:'100%'}} type={type} className={inputStyle} placeholder={placeholder}/>
-        <div style={{width:'40px', height:'40px'}} className="bn dif flex-center-all">
+        <div style={{width:'40px', height:'38px'}} className="bn dif flex-center-all bg-white">
           <Magnifier size={18} color="#D4D4D4"/>
         </div>
       </div>

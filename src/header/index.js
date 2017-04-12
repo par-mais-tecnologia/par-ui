@@ -16,7 +16,7 @@ class Header extends Component {
     } = this.props;
 
     return (
-      <div className="h25 flex flex-row justify-between p-shadow-8 bb b--gray-04 bg-white">
+      <div className="h25 flex flex-row justify-between p-shadow-8 bb b--gray-04 bg-white relative z-1">
         <div className="flex flex-row pl4">
           {logo && <Link to={logoPath}>
             <img
@@ -36,7 +36,7 @@ class Header extends Component {
           <div className="p-f14 roboto-regular gray-02 pt3">
             {name}
           </div>
-          <div className="p-link pt3 ml4" onClick={onLogout}>
+          <div className="p-link p-pt35 ml4" onClick={onLogout}>
             {exitText}
           </div>
         </div>}
