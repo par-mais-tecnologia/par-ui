@@ -28,6 +28,7 @@
 .flex-column-reverse  { flex-direction: column-reverse; }
 .flex-row-reverse     { flex-direction: row-reverse; }
 .flex-wrap-reverse    { flex-wrap: wrap-reverse; }
+.flex-center-all    { justify-content: space-around; align-items: center;}
 
 .items-start    { align-items: flex-start; }
 .items-end      { align-items: flex-end; }
