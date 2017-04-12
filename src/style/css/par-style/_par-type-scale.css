@@ -2,16 +2,17 @@
 
 /*Parmais Custom Type Scale */
 
- .p-f12 { font-size: 0.75rem; }
- .p-f14 { font-size: 0.875rem; }
- .p-f18 { font-size: 1.125rem; }
+.p-f12 { font-size: 0.75rem; }
+.p-f14 { font-size: 0.875rem; }
+.p-f18 { font-size: 1.125rem; }
+.p-f22 { font-size: 1.375rem; }
  /* Small and hard to read for many people so use with extreme caution */
 
 @media (--breakpoint-not-small){
-
   .pf12-ns { font-size: 0.75rem;  }
   .pf14-ns { font-size: 0.875rem; }
   .pf18-ns { font-size: 1.125rem; }
+  .pf22-ns { font-size: 1.375rem; }
 }
 
 @media (--breakpoint-medium) {
@@ -19,6 +20,7 @@
   .pf12-m { font-size: 0.75rem;  }
   .pf14-m { font-size: 0.875rem; }
   .pf18-m { font-size: 1.125rem; }
+  .pf22-m { font-size: 1.375rem; }
 }
 
 @media (--breakpoint-large) {
@@ -26,5 +28,6 @@
   .pf12-l { font-size: 0.75rem;  }
   .pf14-l { font-size: 0.875rem; }
   .pf18-l { font-size: 1.125rem; }
+  .pf22-l { font-size: 1.375rem; }
 
 }

@@ -92,6 +92,7 @@ body {
 @import './par-style/_par-button-style';
 @import './par-style/_par-input-style';
 @import './par-style/_par-placeholder';
+@import './par-style/_par-heights';
 
 /* Variables */
 /* Importing here will allow you to oerride any variables in the modules */
