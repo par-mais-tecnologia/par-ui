@@ -17,7 +17,7 @@ class Header extends Component {
 
     return (
       <div className="h25 flex flex-row justify-between p-shadow-8 bb b--gray-01 bg-white">
-        <div className="flex flex-row pl3">
+        <div className="flex flex-row pl4">
           {logo && <Link to={logoPath}>
             <img
               className="h25 w4 pointer"
