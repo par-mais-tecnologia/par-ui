@@ -12,11 +12,14 @@ class Header extends Component {
       isLogged,
       name,
       exitText,
-      onLogout
+      onLogout,
+      className
     } = this.props;
 
+    const headerClassName = "h25 w-100 flex flex-row justify-between p-shadow-8 bb b--gray-04 bg-white fixed z-1 " + className
+
     return (
-      <div className="h25 w-100 flex flex-row justify-between p-shadow-8 bb b--gray-04 bg-white fixed z-1">
+      <div className={headerClassName}>
         <div className="flex flex-row pl4">
           {logo && <Link to={logoPath}>
             <img
@@ -31,7 +34,7 @@ class Header extends Component {
           </div>
         </div>
         {isLogged &&
-        <div className="flex flex-row pr3">
+        <div className="flex flex-row pr3 fadein-1">
           <Avatar initialLetter={name.substring(0,1).toUpperCase()}/>
           <div className="p-f14 roboto-regular gray-02 pt3">
             {name}
@@ -55,7 +58,7 @@ Header.propTypes = {
   logo: PropTypes.string,
   logoAlt: PropTypes.string,
   logoPath: PropTypes.string,
-
+  className: PropTypes.string
 }
 
 Header.defaultProps = {
@@ -65,7 +68,8 @@ Header.defaultProps = {
   isLogged: false,
   logoAlt: 'Default img alt',
   logoPath: '/',
-  onLogout: defaultLogout
+  onLogout: defaultLogout,
+  className: ''
 }
 
 function defaultLogout() {
