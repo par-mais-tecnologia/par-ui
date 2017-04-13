@@ -95,6 +95,7 @@ body {
 @import './par-style/_par-heights';
 @import './par-style/_par-spacing';
 @import './par-style/_par-animation';
+@import './par-style/_par-border-widths';
 
 /* Variables */
 /* Importing here will allow you to oerride any variables in the modules */
