@@ -99,7 +99,7 @@ class Avatar extends Component {
     } else {
       return (
         <div style={style.areaInlineStyle} className="dif" >
-          <span style={style.photoInlineStyle} className="br-100 ba b--gray-04 roboto-regular f3 white tc bg-gray-06 flex justify-center items-center">
+          <span style={style.photoInlineStyle} className="br-100 ba b--gray-04 roboto-regular f5 white tc bg-gray-06 flex justify-center items-center">
             {initialLetter}
           </span>
         </div>
