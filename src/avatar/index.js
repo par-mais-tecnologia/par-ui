@@ -27,7 +27,8 @@ class Avatar extends Component {
           height: '32px',
           width: '32px',
           margin: '6px',
-          padding: src ? '' :'0'
+          padding: src ? '' :'0',
+          transition: '0.2s all'
         };
         break;
       }
@@ -40,6 +41,7 @@ class Avatar extends Component {
           height: '86px',
           width: '86px',
           padding:src?'':'6px 0 0 0',
+          transition: '0.2s all',
           fontSize:'56px'
         };
         break;
@@ -53,6 +55,7 @@ class Avatar extends Component {
           height: '126px',
           width: '126px',
           padding:src?'':'6px 0 0 2px',
+          transition: '0.2s all',
           fontSize:'96px'
 
         };
@@ -69,7 +72,8 @@ class Avatar extends Component {
           height: '100%',
           width: '100%',
           padding: src ? '' : '6px 0 0 2px',
-          fontSize: '96px'
+          fontSize: '96px',
+          transition: '0.2s all'
         };
         break;
       }
@@ -87,19 +91,25 @@ class Avatar extends Component {
 
     const {
       src,
-      initialLetter
+      initialLetter,
+      customClassName
     } = this.props;
 
+    let className = src ? 'br-100 ba' : 'br-100 ba roboto-regular f5 white tc bg-gray-06 flex justify-center items-center'
+
+    className = customClassName ? className + ' ' + customClassName : className
+
     if (src) {
+
       return (
         <div style={style.areaInlineStyle} className="dif">
-          <img style={style.photoInlineStyle} src={src} className="br-100 ba b--gray-04"/>
+          <img style={style.photoInlineStyle} src={src} className={className}/>
         </div>
       );
     } else {
       return (
         <div style={style.areaInlineStyle} className="dif" >
-          <span style={style.photoInlineStyle} className="br-100 ba b--gray-04 roboto-regular f5 white tc bg-gray-06 flex justify-center items-center">
+          <span style={style.photoInlineStyle} className={className}>
             {initialLetter}
           </span>
         </div>

@@ -20,9 +20,10 @@ class Header extends Component {
 
     return (
       <div className={headerClassName}>
-        <div className="flex flex-row pl4">
+        <div className="flex flex-row">
           {logo && <Link to={logoPath}>
             <img
+              style={{'width': 150}}
               className="h25 w4 pointer"
               src={logo}
               alt={logoAlt}
@@ -35,7 +36,7 @@ class Header extends Component {
         </div>
         {isLogged &&
         <div className="flex flex-row pr3 fadein-1">
-          <Avatar initialLetter={name.substring(0,1).toUpperCase()}/>
+          <Avatar customClassName="b--gray-04" initialLetter={name.substring(0,1).toUpperCase()}/>
           <div className="p-f14 roboto-regular gray-02 pt3">
             {name}
           </div>

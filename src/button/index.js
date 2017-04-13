@@ -10,7 +10,7 @@ class Button extends Component {
       customClassName
     } = this.props;
 
-    const defaultStyle = 'word-wrap h2 ph3 roboto-regular dif p-f12 justify-around items-center overflow-hidden'
+    const defaultStyle = 'word-wrap h2 ph3 roboto-regular dif p-f12 justify-around items-center overflow-hidden transition-02'
     let style = ''
 
     if (disabled) {
@@ -36,7 +36,7 @@ class Button extends Component {
     }
 
     return (
-      <div style={customStyle} className={style} onClick={this.props.onClick}>
+      <div style={customStyle} className={style} onClick={() => !this.props.disabled && this.props.onClick()}>
         <span className="tc">{this.props.label}</span>
       </div>
     )

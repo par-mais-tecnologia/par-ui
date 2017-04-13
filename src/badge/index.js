@@ -16,6 +16,7 @@ class Badge extends Component {
       height: height,
       width: width,
       color: isSelected?backgroundColor:'white',
+      transition: '0.2s all'
     };
   }
 
