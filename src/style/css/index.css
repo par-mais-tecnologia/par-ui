@@ -97,6 +97,9 @@ body {
 @import './par-style/_par-animation';
 @import './par-style/_par-border-widths';
 
+/* Components */
+@import './components/_radio';
+
 /* Variables */
 /* Importing here will allow you to oerride any variables in the modules */
 @import './_colors';
