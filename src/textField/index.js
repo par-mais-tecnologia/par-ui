@@ -27,10 +27,10 @@ class TextInput extends Component {
       inputStyle = inputStyle.concat(' ', 'input-border b--gray-05 ')
     }
 
-    if (this.props.customClassName) {
+    if (this.props.inputClassName) {
       inputStyle = inputStyle.concat(' ', this.props.inputClassName)
     }
-    if (this.props.customClassName) {
+    if (this.props.containerClassName) {
       containerStyle = containerStyle.concat(' ', this.props.containerClassName)
     }
     if (this.props.labelClassName) {
