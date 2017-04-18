@@ -73,6 +73,7 @@ class TextInput extends Component {
   }
 
   render() {
+    const {children} = this.props;
 
     const bulletStyle = {
       margin: '6px 0',
@@ -95,18 +96,29 @@ class TextInput extends Component {
     }
 
     const style = this.getStyle()
+
+    let inputElement;
+    if(children){
+      inputElement = React.cloneElement(children,
+        {
+          ...inputProps,
+          ...children.props,
+          className: style.inputStyle,
+          type:this.props.type,
+          placeholder:this.props.placeholder
+        });
+    }else {
+      inputElement = <input {...inputProps} type={this.props.type} className={style.inputStyle} placeholder={this.props.placeholder}/>
+    }
+
     return (
       <div style={customSize} className={style.containerStyle}>
         <div className="flex flex-row pv1">
           <span style={bulletStyle} />
           <span className={style.labelStyle}>{this.props.label}</span>
         </div>
-
         <div className="flex flex-column">
-          <input {...inputProps} 
-            type={this.props.type} 
-            className={style.inputStyle} 
-            placeholder={this.props.placeholder} />
+          {inputElement}
           <span className={style.errorStyle}>{this.props.errorText}</span>
         </div>
       </div>
