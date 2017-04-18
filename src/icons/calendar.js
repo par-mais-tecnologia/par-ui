@@ -2,12 +2,12 @@ import React, {Component, PropTypes} from 'react';
 
 class Calendar extends Component {
   render() {
-    const { size, color, background} = this.props;
+    const { size, color, background, onClick} = this.props;
 
     const viewBox = "0 0 28 28";
 
     return (
-      <svg style={{backgroundColor:background}} viewBox={viewBox} fill={color}  height={size} width={size}>
+      <svg onClick={this.props.onClick} style={{backgroundColor:background}} viewBox={viewBox} fill={color}  height={size} width={size}>
         <g>
           <path d="M26,6V18l-8,8H2V6H26m0-2H2A2,2,0,0,0,0,6V26a2,2,0,0,0,2,2H18a2,2,0,0,0,1.41-.59l8-8A2,2,0,0,0,28,18V6a2,2,0,0,0-2-2Z"/>
           <path d="M26,18l-8,8V18h8m0-1H18a1,1,0,0,0-1,1v8a1,1,0,0,0,1.71.71l8-8A1,1,0,0,0,26,17Z"/>
@@ -45,6 +45,7 @@ Calendar.propTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 Calendar.defaultProps = {
