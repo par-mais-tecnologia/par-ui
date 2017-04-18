@@ -23,7 +23,13 @@ class Radio extends Component {
       optional.onChange = onChange.bind(null, this.props.item)
     }
 
-    const checkClassName = "check " + (errorText ? 'error' : '')
+    console.log(errorText)
+    const checkClassName = "check " + 
+      (errorText ? 'error ' : '') +
+      (disabled ? 'disabled ' : '')
+
+    const labelClassName = "roboto-regular p-f18 " + 
+      (disabled ? 'gray-04' : 'gray-02')
 
     return (
       <div className="flex items-center par-ui-radio">
@@ -33,7 +39,7 @@ class Radio extends Component {
           type="radio"
           id={this.props.id}
           {...optional} />
-        <label className="roboto-regular p-f18 gray-02" htmlFor={this.props.id}>{desc}</label>
+        <label className={labelClassName} htmlFor={this.props.id}>{desc}</label>
         <div className={checkClassName}></div>
       </div>
     )

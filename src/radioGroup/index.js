@@ -24,11 +24,13 @@ class RadioGroup extends Component {
 
     if (this.props.disabled) {
       inputStyle = inputStyle.concat(' ', 'bg-gray-07 input-border-disabled cursor-disabled').replace('gray-02', 'gray-04')
-    } else if (this.props.errorText) {
-      labelStyle = labelStyle.replace('gray-02', 'kitkat-01')
-      inputStyle = inputStyle.concat(' ', 'input-border-error')
     } else {
       inputStyle = inputStyle.concat(' ', 'input-border b--gray-05 ')
+    }
+
+    if (this.props.errorText) {
+      labelStyle = labelStyle.replace('gray-02', 'kitkat-01')
+      inputStyle = inputStyle.concat(' ', 'input-border-error')
     }
 
     if (this.props.inputClassName) {
@@ -92,7 +94,8 @@ RadioGroup.propTypes = {
     PropTypes.string,
     PropTypes.func,
     PropTypes.object
-  ])
+  ]),
+  disabled: PropTypes.bool
 }
 
 RadioGroup.defaultProps = {

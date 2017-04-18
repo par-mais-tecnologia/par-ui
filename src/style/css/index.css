@@ -99,6 +99,7 @@ body {
 
 /* Components */
 @import './components/_radio';
+@import './components/_checkbox';
 
 /* Variables */
 /* Importing here will allow you to oerride any variables in the modules */
