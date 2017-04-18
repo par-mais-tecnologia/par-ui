@@ -23,7 +23,6 @@ class Radio extends Component {
       optional.onChange = onChange.bind(null, this.props.item)
     }
 
-    console.log(errorText)
     const checkClassName = "check " + 
       (errorText ? 'error ' : '') +
       (disabled ? 'disabled ' : '')
