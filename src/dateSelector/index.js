@@ -5,7 +5,7 @@ import DateInput from '../dateInput';
 import moment from 'moment';
 
 
-class DatePicker extends Component {
+class DateSelector extends Component {
   componentWillMount() {
     this.setState({
       isDatePickerOpen: false,
@@ -49,14 +49,14 @@ class DatePicker extends Component {
   }
 }
 
-DatePicker.propTypes = {
+DateSelector.propTypes = {
   onChange: PropTypes.func,
   inputClassName: PropTypes.string
 };
-DatePicker.defaultProps = {
+DateSelector.defaultProps = {
   value: '',
   inputClassName:''
 };
 
-export default DatePicker;
+export default DateSelector;
 
