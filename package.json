@@ -41,6 +41,7 @@
     "moment": "^2.18.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-select": "^1.0.0-rc.3",
     "react-input-mask": "^0.8.0"
   },
   "devDependencies": {

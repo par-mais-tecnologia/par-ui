@@ -100,6 +100,7 @@ body {
 /* Components */
 @import './components/_radio';
 @import './components/_checkbox';
+@import './components/_select';
 
 /* Libs */
 @import './libraries/_datepicker.css';
