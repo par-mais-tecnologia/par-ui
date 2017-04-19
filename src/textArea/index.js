@@ -37,17 +37,17 @@ class TextArea extends Component {
     };
   }
 
-  handleInputBlur = (event) =>{
+  handleInputBlur(event){
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
   };
-  handleInputChange = (event) => {
+  handleInputChange(event){
     if (this.props.onChange) {
       this.props.onChange(event, event.target.value);
     }
   };
-  handleInputFocus = (event) =>{
+  handleInputFocus(event){
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
