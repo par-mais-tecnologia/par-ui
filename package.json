@@ -38,9 +38,11 @@
   "homepage": "https://github.com/par-mais-tecnologia/par-ui#readme",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "moment": "^2.18.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-select": "^1.0.0-rc.3"
+    "react-select": "^1.0.0-rc.3",
+    "react-input-mask": "^0.8.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",

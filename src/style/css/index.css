@@ -102,6 +102,9 @@ body {
 @import './components/_checkbox';
 @import './components/_select';
 
+/* Libs */
+@import './libraries/_datepicker.css';
+
 /* Variables */
 /* Importing here will allow you to oerride any variables in the modules */
 @import './_colors';
