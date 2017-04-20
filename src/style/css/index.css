@@ -103,7 +103,7 @@ body {
 @import './components/_select';
 
 /* Libs */
-@import './libraries/_datepicker.css';
+@import './libraries/_datepicker';
 
 /* Variables */
 /* Importing here will allow you to oerride any variables in the modules */

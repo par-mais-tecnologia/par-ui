@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 
 class TextArea extends Component {
   getStyle() {
-    let inputStyle = "roboto-regular gray-02 p-f18 pl3";
+    let inputStyle = "roboto-regular gray-02 p-f18 placeholder";
     let containerStyle = "dif flex-column";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
     let errorStyle = "roboto-regular h1 p-f14 kitkat-01 p-ti-075";
@@ -19,7 +19,7 @@ class TextArea extends Component {
     if (this.props.inputClassName) {
       inputStyle = inputStyle.concat(" ", this.props.inputClassName)
     }
-    if (this.props.customClassName) {
+    if (this.props.containerClassName) {
       containerStyle = containerStyle.concat(" ", this.props.containerClassName)
     }
     if (this.props.labelClassName) {
@@ -30,10 +30,10 @@ class TextArea extends Component {
     }
 
     return {
-            containerStyle:containerStyle,
-            inputStyle:inputStyle,
-            labelStyle:labelStyle,
-            errorStyle:errorStyle,
+      containerStyle:containerStyle,
+      inputStyle:inputStyle,
+      labelStyle:labelStyle,
+      errorStyle:errorStyle,
     };
   }
 
@@ -81,7 +81,7 @@ class TextArea extends Component {
           <span style={bulletStyle}/>
           <span className={style.labelStyle}>{this.props.label}</span>
         </div>
-        <textarea rows={this.props.rows} {...inputProps} type={this.props.type} className={style.inputStyle} placeholder={this.props.placeholder}/>
+        <textarea style={{resize: 'none', padding: '11px 0px 0px 12px'}} rows={this.props.rows} {...inputProps} type={this.props.type} className={style.inputStyle} placeholder={this.props.placeholder}/>
         <span className={style.errorStyle}>{this.props.errorText}</span>
       </div>
     );
@@ -89,7 +89,6 @@ class TextArea extends Component {
 }
 
 TextArea.propTypes = {
-  customClassName: PropTypes.string,
   disabled: PropTypes.bool,
   errorText: PropTypes.string,
   label: PropTypes.string,

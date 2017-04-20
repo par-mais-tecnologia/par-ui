@@ -3,6 +3,7 @@ import InputMask from 'react-input-mask';
 import moment from 'moment'
 
 class DateInput extends Component {
+
   getStyle() {
     const {
       disabled,
@@ -15,7 +16,7 @@ class DateInput extends Component {
     } = this.props;
 
     let inputStyle = "roboto-regular gray-02 h25 p-f18 input-text-indent-12";
-    let containerStyle = "dif flex-column";
+    let containerStyle = "dif flex-column flex-auto";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
     let errorStyle = "roboto-regular h1 p-f14 kitkat-01 p-ti-075";
     let ageStyle = "roboto-regular h1 p-f14 gray-02 p-ti-075 pt1";
@@ -32,7 +33,7 @@ class DateInput extends Component {
     if (inputClassName) {
       inputStyle = inputStyle.concat(" ", inputClassName)
     }
-    if (customClassName) {
+    if (containerClassName) {
       containerStyle = containerStyle.concat(" ", containerClassName)
     }
     if (labelClassName) {
@@ -55,17 +56,19 @@ class DateInput extends Component {
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
-  };
+  }
+
   handleInputChange (event) {
     if (this.props.onChange) {
       this.props.onChange(event, event.target.value);
     }
-  };
+  }
+
   handleInputFocus(event){
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
-  };
+  }
 
   render() {
     let age = '00';
@@ -87,9 +90,9 @@ class DateInput extends Component {
 
     const inputProps = {
       disabled: this.props.disabled,
-      onBlur: this.handleInputBlur,
-      onChange: this.handleInputChange,
-      onFocus: this.handleInputFocus,
+      onBlur: this.handleInputBlur.bind(this),
+      onChange: this.handleInputChange.bind(this),
+      onFocus: this.handleInputFocus.bind(this),
       value: this.props.value
     };
 
@@ -113,7 +116,7 @@ class DateInput extends Component {
                    placeholder={this.props.placeholder}
                    maskChar={null} mask={"99/99/9999"}/>
         <span className={ageStyle}>{ageText}</span>
-        <span className={errorStyle}>{this.props.errorText}</span>
+        {this.props.showError && <span className={errorStyle}>{this.props.errorText}</span>}
       </div>
     );
   }
@@ -137,7 +140,8 @@ DateInput.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
-  children: PropTypes.node
+  children: PropTypes.node,
+  showError: PropTypes.bool
 };
 
 DateInput.defaultProps = {
@@ -145,7 +149,8 @@ DateInput.defaultProps = {
   placeholder: "00/00/0000",
   requiredColor: "",
   type: 'text',
-  value:''
+  value:'',
+  showError: true
 };
 
 export default DateInput;
