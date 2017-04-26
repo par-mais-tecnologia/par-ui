@@ -8,28 +8,48 @@ class Badge extends Component {
       backgroundColor,
       height,
       width,
-      isSelected
+      isSelected,
+      bulletColor
     } = this.props;
 
-    return {
-      backgroundColor: isSelected? 'white':backgroundColor,
-      height: height,
-      width: width,
-      color: isSelected?backgroundColor:'white',
-      transition: '0.2s all'
+    const bulletStyle = {
+      margin: '6px 0',
+      height: '6px',
+      width: '6px',
+      backgroundColor: bulletColor,
+      marginRight:'8px',
     };
+
+    const badgeStyle = {
+      backgroundColor: isSelected? 'white':backgroundColor,
+      color: isSelected?backgroundColor:'white',
+      height,
+      width
+    };
+
+    return {
+      bulletStyle,
+      badgeStyle
+    }
   }
 
   render() {
     const {
       badgeText,
-      onClick
+      onClick,
+      bulletColor,
+      icon
     } = this.props;
 
-    const style = this.getStyle();
+    const {
+      bulletStyle,
+      badgeStyle
+    } = this.getStyle();
 
     return (
-      <div style={style} className="roboto-regular p-f12 white br4 ph3 dif flex-center-all" onClick={onClick}>
+      <div style={badgeStyle} className="roboto-regular p-f12 white br4 ph3 dif flex-center-all" onClick={onClick}>
+        {bulletColor && <span style={bulletStyle}/>}
+        {icon && <span>{icon}</span>}
         <span >{badgeText}</span>
       </div>
     );
@@ -44,7 +64,9 @@ Badge.propTypes = {
   /** On click Function.**/
   onClick:PropTypes.func,
   /** Selected state**/
-  isSelected:PropTypes.bool
+  isSelected:PropTypes.bool,
+  /** Icon**/
+  icon:PropTypes.node
 };
 
 Badge.defaultProps = {
