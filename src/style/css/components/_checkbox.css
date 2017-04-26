@@ -16,7 +16,7 @@
 .par-ui-checkbox label{
   padding-left: 48px;
   cursor: pointer;
-  z-index: 7;
+  z-index: 5;
 }
 
 .par-ui-checkbox .check:after {
