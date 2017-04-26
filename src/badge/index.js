@@ -9,7 +9,8 @@ class Badge extends Component {
       height,
       width,
       isSelected,
-      bulletColor
+      bulletColor,
+      textColor
     } = this.props;
 
     const bulletStyle = {
@@ -18,11 +19,12 @@ class Badge extends Component {
       width: '6px',
       backgroundColor: bulletColor,
       marginRight:'8px',
+      color:textColor
     };
 
     const badgeStyle = {
-      backgroundColor: isSelected? 'white':backgroundColor,
-      color: isSelected?backgroundColor:'white',
+      backgroundColor: isSelected? textColor:backgroundColor,
+      color: isSelected?backgroundColor:textColor,
       height,
       width
     };
@@ -38,7 +40,8 @@ class Badge extends Component {
       badgeText,
       onClick,
       bulletColor,
-      icon
+      icon,
+      ...rest
     } = this.props;
 
     const {
@@ -61,6 +64,8 @@ Badge.propTypes = {
   badgeText:PropTypes.string,
   /** The backgroundColor of the badge.**/
   backgroundColor: PropTypes.string,
+  /** The font color of the badge.**/
+  textColor: PropTypes.string,
   /** On click Function.**/
   onClick:PropTypes.func,
   /** Selected state**/
@@ -74,7 +79,8 @@ Badge.defaultProps = {
   width:'',
   onClick: onClick,
   backgroundColor:'DarkGray',
-  isSelected:false
+  isSelected:false,
+  textColor:'White'
 };
 
 function onClick() {
