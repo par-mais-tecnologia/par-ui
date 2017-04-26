@@ -83,6 +83,7 @@ class ParSelect extends Component {
         <div className="flex flex-column">
           <Select
             clearable={false}
+            value={this.props.value}
             placeholder={this.props.placeholder}
             arrowRenderer={arrowRenderer}
             options={this.props.options}

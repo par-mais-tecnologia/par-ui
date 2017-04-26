@@ -475,3 +475,15 @@
 .Select.is-disabled .Select-control {
   background-color: var(--gray-07);
 }
+
+.Select-value {
+  font-family: Roboto Regular;
+  padding-top: 6px;
+  font-size: 18px;
+  padding-left: 12px !important;
+}
+
+.Select-value .Select-value-label {
+  color: var(--gray-02) !important;
+}
+
