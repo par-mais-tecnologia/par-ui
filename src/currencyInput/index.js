@@ -34,7 +34,7 @@ class CurrencyInput extends Component {
     if (inputClassName) {
       inputStyle = inputStyle.concat(" ", inputClassName)
     }
-    if (customClassName) {
+    if (containerClassName) {
       containerStyle = containerStyle.concat(" ", containerClassName)
     }
     if (labelClassName) {
