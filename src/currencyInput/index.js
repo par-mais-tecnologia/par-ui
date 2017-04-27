@@ -82,6 +82,7 @@ class CurrencyInput extends Component {
       subtitle,
       placeholder,
       inputValue,
+      label
     } = this.props;
 
 
@@ -117,7 +118,7 @@ class CurrencyInput extends Component {
 
     return (
       <div style={customSize} className={containerStyle}>
-        <Label errorText={errorText} labelStyle={labelStyle} text={this.props.label} bulletColor={requiredColor}/>
+       {label && <Label errorText={errorText} labelStyle={labelStyle} text={label} bulletColor={requiredColor}/>}
         <NumberFormat
           {...inputProps}
           placeholder={placeholder}
@@ -156,7 +157,6 @@ CurrencyInput.propTypes = {
 };
 
 CurrencyInput.defaultProps = {
-  label: "Currency input",
   placeholder: "000 000 000,00",
   requiredColor: "",
   type: 'text',
