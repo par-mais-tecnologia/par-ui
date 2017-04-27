@@ -37,3 +37,13 @@
 .input-placeholder::placeholder {
     color: var(--gray-05);
 }
+
+.input-money-sign::before{
+    content: "R$";
+    font-family: "Roboto Regular";
+    position: relative;
+    top: 59px;
+    left: 12px;
+    color: var(--gray-02);
+    width: 20px;
+}
