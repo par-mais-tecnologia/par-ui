@@ -487,3 +487,7 @@
   color: var(--gray-02) !important;
 }
 
+.open-up .Select-menu-outer {
+  top: auto;
+  bottom: 100%;
+}

@@ -16,7 +16,7 @@ class Header extends Component {
       className
     } = this.props;
 
-    const headerClassName = "h25 w-100 flex flex-row justify-between p-shadow-8 bb b--gray-04 bg-white fixed z-1 " + className
+    const headerClassName = "h25 w-100 flex flex-row justify-between p-shadow-8 bb b--gray-04 bg-white fixed z-999 " + className
 
     return (
       <div className={headerClassName}>
