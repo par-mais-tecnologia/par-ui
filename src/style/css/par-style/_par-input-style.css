@@ -42,8 +42,7 @@
     content: "R$";
     font-family: "Roboto Regular";
     position: relative;
-    top: 59px;
+    top: 15px;
     left: 12px;
     color: var(--gray-02);
-    width: 20px;
 }

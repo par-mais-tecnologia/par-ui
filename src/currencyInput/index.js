@@ -15,11 +15,10 @@ class CurrencyInput extends Component {
       subtitleClassName,
     } = this.props;
 
-    let inputStyle = "roboto-regular gray-02 h25 p-f18  pl4 placeholder input-money-sign";
+    let inputStyle = "roboto-regular gray-02 h25 p-f18  pl4 placeholder ";
     let containerStyle = "dif flex-column";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
     let subtitleStyle = "roboto-regular h1 p-f14 gray-02 p-ti-075";
-    let ageStyle = "roboto-regular h1 p-f14 gray-02 p-ti-075 pt1";
 
     if (disabled) {
       inputStyle = inputStyle.concat(" ", "bg-gray-07 input-border-disabled cursor-disabled").replace("gray-02", "gray-04")
@@ -52,7 +51,6 @@ class CurrencyInput extends Component {
       inputStyle,
       labelStyle,
       subtitleStyle,
-      ageStyle
     };
   }
 
@@ -118,7 +116,8 @@ class CurrencyInput extends Component {
 
     return (
       <div style={customSize} className={containerStyle}>
-       {label && <Label errorText={errorText} labelStyle={labelStyle} text={label} bulletColor={requiredColor}/>}
+        {label && <Label errorText={errorText} labelStyle={labelStyle} text={label} bulletColor={requiredColor}/>}
+        <span style={{width:'0', height:'0'}} className='input-money-sign'></span>
         <NumberFormat
           {...inputProps}
           placeholder={placeholder}
@@ -163,4 +162,3 @@ CurrencyInput.defaultProps = {
 };
 
 export default CurrencyInput;
-

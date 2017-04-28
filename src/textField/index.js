@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import Label from '../label'
 
 class TextInput extends Component {
 
@@ -113,10 +114,7 @@ class TextInput extends Component {
 
     return (
       <div style={customSize} className={style.containerStyle}>
-        <div className="flex flex-row pv1">
-          <span style={bulletStyle} />
-          <span className={style.labelStyle}>{this.props.label}</span>
-        </div>
+        {this.props.label && <Label errorText={this.props.errorText} labelStyle={this.props.labelStyle} text={this.props.label} bulletColor={this.props.requiredColor}/>}
         <div className="flex flex-column">
           {inputElement}
           <span className={style.errorStyle}>{this.props.errorText}</span>
@@ -148,7 +146,6 @@ TextInput.propTypes = {
 }
 
 TextInput.defaultProps = {
-  label: 'Label',
   placeholder: 'Placeholder',
   type: 'text'
 }
