@@ -31,7 +31,7 @@ class RequestButton extends Component {
     return (
       <div style={customStyle} className={style} onClick={this.props.onClick}>
         {this.props.waiting && <img style={{left: 8}} className="absolute" src={this.props.loadingIcon} />}
-        <span className="tc">{this.props.label}</span>
+        <span className="tc" style={{paddingLeft: this.props.waiting ? 12 : 0}}>{this.props.label}</span>
       </div>
     )
   }

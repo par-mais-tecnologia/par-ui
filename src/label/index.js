@@ -47,7 +47,6 @@ Label.propTypes = {
 Label.defaultProps = {
   customLabelStyle:'',
   text:'label text',
-  bulletColor:'Black',
   showBullet:true
 };
 
