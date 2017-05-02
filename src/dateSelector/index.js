@@ -53,7 +53,10 @@ class DateSelector extends Component {
             value={this.props.value}
             selected={date}
             onClickOutside={this.handleClickOutside.bind(this)}
-            onChange={date => this.props.onChange({target: {value: date.format('DD/MM/YYYY')}})}
+            onChange={date => {
+              this.props.onChange(date.format('DD/MM/YYYY'))
+              this.handleClickOutside()
+            }}
             customInput={<Calendar size={28} color={this.state.isDatePickerOpen ? 'white' : 'var(--gray-02)'}
                                    background={this.state.isDatePickerOpen ? 'var(--cottoncandy-02)' : ''}/>}
             popoverTargetOffset="7px -200px"/>
