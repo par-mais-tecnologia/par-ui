@@ -16,7 +16,7 @@ class CPFInput extends Component {
     } = this.props;
 
     let inputStyle = "roboto-regular gray-02 h25 p-f18 input-text-indent-12 placeholder";
-    let containerStyle = "dif flex-column flex-auto";
+    let containerStyle = "dif flex-column flex-auto mb2";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
     let errorStyle = "roboto-regular h1 p-f14 kitkat-01 p-ti-075";
     let ageStyle = "roboto-regular h1 p-f14 gray-02 p-ti-075 pt1";

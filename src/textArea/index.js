@@ -3,7 +3,7 @@ import React, {Component, PropTypes} from 'react';
 class TextArea extends Component {
   getStyle() {
     let inputStyle = "roboto-regular gray-02 p-f18 placeholder";
-    let containerStyle = "dif flex-column";
+    let containerStyle = "dif flex-column mb2";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
     let errorStyle = "roboto-regular h1 p-f14 kitkat-01 p-ti-075";
 
