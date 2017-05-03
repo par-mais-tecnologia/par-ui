@@ -4,10 +4,8 @@ class Label extends Component {
   getStyle() {
     const {customLabelStyle, bulletColor, errorText} = this.props;
     let labelStyle = "pl2 roboto-regular p-f14 gray-02 " + customLabelStyle;
-    console.log('errorText ', errorText );
     if (errorText){
       labelStyle = labelStyle.replace("gray-02", "kitkat-01");
-      console.log('labelStyle ',labelStyle  );
     }
 
     const bulletStyle = {
