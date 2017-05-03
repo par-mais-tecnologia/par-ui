@@ -51,24 +51,24 @@ class CurrencyInput extends Component {
       inputStyle,
       labelStyle,
       subtitleStyle,
-    };
+    }
   }
 
   handleInputBlur(event){
     if (this.props.onBlur) {
-      this.props.onBlur(event);
+      this.props.onBlur(event)
     }
-  };
+  }
   handleInputChange(event){
     if (this.props.onChange) {
-      this.props.onChange(event, event.target.value);
+      this.props.onChange(event, event.target.value)
     }
-  };
+  }
   handleInputFocus(event){
     if (this.props.onFocus) {
-      this.props.onFocus(event);
+      this.props.onFocus(event)
     }
-  };
+  }
 
   render() {
     const {
@@ -81,7 +81,7 @@ class CurrencyInput extends Component {
       placeholder,
       inputValue,
       label
-    } = this.props;
+    } = this.props
 
 
 
@@ -98,9 +98,9 @@ class CurrencyInput extends Component {
 
     const inputProps = {
       disabled: disabled,
-      onBlur: this.handleInputBlur,
-      onChange: this.handleInputChange,
-      onFocus: this.handleInputFocus,
+      onBlur: this.handleInputBlur.bind(this),
+      onChange: this.handleInputChange.bind(this),
+      onFocus: this.handleInputFocus.bind(this),
       value: value
     };
 
@@ -124,7 +124,7 @@ class CurrencyInput extends Component {
           value={inputValue}
           className={inputStyle}
           decimalPrecision={true}
-          onChange={(e) => this.props.onChange( e.target.value)}
+          onChange={(e, value) => this.props.onChange(value)}
           thousandSeparator={' '} decimalSeparator={','}  />
         <span className={subtitleStyle}>{subtitleText}</span>
       </div>

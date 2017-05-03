@@ -67,9 +67,9 @@ class TextArea extends Component {
 
     const inputProps = {
       disabled: this.props.disabled,
-      onBlur: this.handleInputBlur,
-      onChange: this.handleInputChange,
-      onFocus: this.handleInputFocus,
+      onBlur: this.handleInputBlur.bind(this),
+      onChange: this.handleInputChange.bind(this),
+      onFocus: this.handleInputFocus.bind(this),
       value:this.props.value
     };
 
