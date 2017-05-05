@@ -25,7 +25,7 @@
 }
 
 .button-secondary-color{
-    color: var(--cottoncandy-02);
+    color: var(--cottoncandy-01);
 }
 .button-secondary-color:hover{
     color: var(--white);

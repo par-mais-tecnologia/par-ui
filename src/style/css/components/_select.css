@@ -483,11 +483,15 @@
   padding-left: 12px !important;
 }
 
-.Select-value .Select-value-label {
+.Select:not(.is-disabled) .Select-value .Select-value-label {
   color: var(--gray-02) !important;
+}
+.Select.is-disabled .Select-value .Select-value-label {
+  color: var(--gray-04) !important;
 }
 
 .open-up .Select-menu-outer {
   top: auto;
   bottom: 100%;
 }
+
