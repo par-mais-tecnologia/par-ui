@@ -73,7 +73,7 @@ class RadioGroup extends Component {
           <span className={style.labelStyle}>{this.props.label}</span>
         </div>
         
-        <Component {...rest}>{children} </Component>
+        <Component {...rest}>{children}</Component>
       </div>
     )
   }

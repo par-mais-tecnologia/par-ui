@@ -16,8 +16,11 @@ class Check extends Component {
 
     const viewBox = "0 0 28 20";
 
+    let height = this.props.height ? this.props.height : size
+    let width = this.props.width ? this.props.width : size
+
     return (
-      <svg style={{backgroundColor:background}} viewBox={viewBox} fill={color}  height={size} width={size}>
+      <svg className={this.props.className} style={{backgroundColor:background}} viewBox={viewBox} fill={color}  height={height} width={width}>
         <polyline style={style} points="1 10 9.67 19 27 1"/>
       </svg>
     );
@@ -26,6 +29,9 @@ class Check extends Component {
 
 Check.propTypes = {
   size: PropTypes.number,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  className: PropTypes.string,
   color: PropTypes.string,
   background: PropTypes.string,
 };

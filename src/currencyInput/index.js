@@ -16,7 +16,7 @@ class CurrencyInput extends Component {
     } = this.props;
 
     let inputStyle = "roboto-regular gray-02 h25 p-f18  pl4 placeholder ";
-    let containerStyle = "dif flex-column";
+    let containerStyle = "dif flex-column mb2";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
     let subtitleStyle = "roboto-regular h1 p-f14 gray-02 p-ti-075";
 
@@ -75,11 +75,10 @@ class CurrencyInput extends Component {
       requiredColor,
       width,
       disabled,
-      value,
       errorText,
       subtitle,
       placeholder,
-      inputValue,
+      value,
       label
     } = this.props
 
@@ -121,10 +120,12 @@ class CurrencyInput extends Component {
         <NumberFormat
           {...inputProps}
           placeholder={placeholder}
-          value={inputValue}
           className={inputStyle}
           decimalPrecision={true}
-          onChange={(e, value) => this.props.onChange(value)}
+          onChange={(e, value) => {
+            let floatValue = value ? parseFloat(value) : value
+            this.props.onChange(floatValue)
+          }}
           thousandSeparator={' '} decimalSeparator={','}  />
         <span className={subtitleStyle}>{subtitleText}</span>
       </div>
