@@ -18,7 +18,7 @@ class CurrencyInput extends Component {
     let inputStyle = "roboto-regular gray-02 h25 p-f18  pl4 placeholder ";
     let containerStyle = "dif flex-column mb2";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
-    let subtitleStyle = "roboto-regular h1 p-f14 gray-02 p-ti-075";
+    let subtitleStyle = "roboto-regular h1 p-f14 gray-01 p-ti-075";
 
     if (disabled) {
       inputStyle = inputStyle.concat(" ", "bg-gray-07 input-border-disabled cursor-disabled").replace("gray-02", "gray-04")
