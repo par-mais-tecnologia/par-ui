@@ -47,7 +47,7 @@ class Badge extends Component {
       badgeStyle
     } = this.getStyle();
 
-    let className = "roboto-regular p-f12 white br4 ph3 dif flex-center-all"
+    let className = "roboto-regular p-f12 white br4 ph2 dif flex-center-all"
 
     if(this.props.containerClassName){
       className += " " + this.props.containerClassName
