@@ -41,3 +41,7 @@
   color: var(--gray-05);
   text-indent: 12px;
 }
+
+.text-indent{
+    text-indent: 12px;
+}
