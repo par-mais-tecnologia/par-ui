@@ -40,10 +40,11 @@
     "babel-polyfill": "^6.23.0",
     "moment": "^2.18.1",
     "react": "^15.4.2",
+    "react-currency-input": "^1.2.6",
     "react-dom": "^15.4.2",
     "react-input-mask": "^0.8.0",
+    "react-modal": "^1.7.7",
     "react-onclickoutside": "^5.11.1",
-    "react-currency-input": "^1.2.6",
     "react-select": "^1.0.0-rc.3"
   },
   "devDependencies": {
