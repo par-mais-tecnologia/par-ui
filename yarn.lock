@@ -1631,7 +1631,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
     create-hash "^1.1.0"
     inherits "^2.0.1"
 
-create-react-class@^15.5.x:
+create-react-class@^15.5.2, create-react-class@^15.5.x:
   version "15.5.2"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.2.tgz#6a8758348df660b88326a0e764d569f274aad681"
   dependencies:
@@ -1933,6 +1933,10 @@ ee-first@1.1.1:
 electron-to-chromium@^1.2.7:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.2.tgz#b8ce5c93b308db0e92f6d0435c46ddec8f6363ab"
+
+element-class@^0.2.0:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/element-class/-/element-class-0.2.2.tgz#9d3bbd0767f9013ef8e1c8ebe722c1402a60050e"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -2263,6 +2267,10 @@ exec-sh@^0.2.0:
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.2.0.tgz#14f75de3f20d286ef933099b2ce50a90359cef10"
   dependencies:
     merge "^1.1.3"
+
+exenv@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.0.tgz#3835f127abf075bfe082d0aed4484057c78e3c89"
 
 exit-hook@^1.0.0:
   version "1.1.1"
@@ -4495,6 +4503,12 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@^15.5.7:
+  version "15.5.8"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
+  dependencies:
+    fbjs "^0.8.9"
+
 proxy-addr@~1.1.3:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-1.1.4.tgz#27e545f6960a44a627d9b44467e35c1b6b4ce2f3"
@@ -4579,6 +4593,12 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-currency-input@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/react-currency-input/-/react-currency-input-1.2.6.tgz#8ada2ebf5ed186ffbb58236de19a2c4d4db65783"
+  dependencies:
+    react ">=0.14.0 || >=15.0.0"
+
 react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
@@ -4595,6 +4615,16 @@ react-input-mask@^0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-0.8.0.tgz#c8243004f2a43a4b6d5add380f0a5d68d9be806f"
 
+react-modal@^1.7.7:
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-1.7.7.tgz#70205f51c58708c487aff681ba3fed7946e391d9"
+  dependencies:
+    create-react-class "^15.5.2"
+    element-class "^0.2.0"
+    exenv "1.2.0"
+    lodash.assign "^4.2.0"
+    prop-types "^15.5.7"
+
 react-onclickoutside@^5.11.1:
   version "5.11.1"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-5.11.1.tgz#00314e52567cf55faba94cabbacd119619070623"
@@ -4608,7 +4638,7 @@ react-select@^1.0.0-rc.3:
     classnames "^2.2.4"
     react-input-autosize "^1.1.0"
 
-react@^15.4.2:
+"react@>=0.14.0 || >=15.0.0", react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
