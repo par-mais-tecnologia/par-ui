@@ -40,6 +40,7 @@ Label.propTypes = {
   requiredColor: PropTypes.string,
   showBullet: PropTypes.bool,
   errorText: PropTypes.string,
+  bulletColor: PropTypes.string
 };
 
 Label.defaultProps = {
