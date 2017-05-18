@@ -236,7 +236,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   border-top-color: #e6e6e6;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,.1);
   box-sizing: border-box;
   margin-top: -1px;
   max-height: 200px;
@@ -447,7 +447,8 @@
 }
 
 .Select-option.is-focused {
-  background-color: var(--gray-06); 
+  background-color: var(--cottoncandy-01); 
+  color: white;
 }
 
 .Select-down-arrow {
