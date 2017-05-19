@@ -40,6 +40,7 @@ class DateSelector extends Component {
       <div className=" flex-row dif bg-gray-03 w-100">
         <DateInput 
           inputClassName={this.props.inputClassName} 
+          disabled={this.props.disabled}
           showError={false}
           value={this.props.value} onChange={this.props.onChange} label='DATA DE NASCIMENTO'
                    requiredColor={this.props.requiredColor}/>
