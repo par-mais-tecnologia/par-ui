@@ -55,7 +55,11 @@ class RadioGroup extends Component {
   }
 
   render(){
-    const {Component, name, requiredColor, value, onChange, children, errorText, ...rest} = this.props
+    const {Component, name, requiredColor, value, onChange, children, errorText, 
+      containerStyle,
+      containerClassName,
+      hideLabel,
+      ...rest} = this.props
 
     const bulletStyle = {
       margin: '6px 0',
@@ -67,11 +71,12 @@ class RadioGroup extends Component {
     const style = this.getStyle()
 
     return (
-      <div>
+      <div style={containerStyle} className={containerClassName}>
+        {hideLabel ? '' : 
         <div className="flex flex-row pv1">
           <span style={bulletStyle} />
           <span className={style.labelStyle}>{this.props.label}</span>
-        </div>
+        </div>}
         
         <Component {...rest}>{children}</Component>
       </div>
@@ -95,7 +100,10 @@ RadioGroup.propTypes = {
     PropTypes.func,
     PropTypes.object
   ]),
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  hideLabel: PropTypes.bool,
+  containerClassName: PropTypes.string,
+  containerStyle: PropTypes.object
 }
 
 RadioGroup.defaultProps = {
