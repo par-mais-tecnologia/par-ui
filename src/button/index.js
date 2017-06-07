@@ -60,7 +60,7 @@ Button.propTypes = {
 Button.defaultProps = {
   label: 'Primary',
   onClick,
-  customStyle: ''
+  customStyle: null
 }
 
 function onClick() {
