@@ -30,10 +30,12 @@ class Button extends Component {
 
   render() {
     const style = this.getButtonStyle()
-    const customStyle = {
-      height: this.props.height,
-      width: this.props.width
-    }
+    const customStyle = 
+      this.props.customStyle ? this.props.customStyle : {
+        height: this.props.height,
+        width: this.props.width,
+      }
+
 
     return (
       <div style={customStyle} className={style} onClick={() => !this.props.disabled && this.props.onClick()}>
@@ -52,6 +54,7 @@ Button.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
   customClassName: PropTypes.string,
+  customStyle: PropTypes.object
 }
 
 Button.defaultProps = {
