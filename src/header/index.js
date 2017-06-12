@@ -24,12 +24,12 @@ class Header extends Component {
 
 
     return (
-      <Link to={this.logoPath}>
+      <Link to={this.props.logoPath}>
         <img
           style={{'width': 150}}
           className="h25 w4 pointer"
-          src={this.logo}
-          alt={this.logoAlt}
+          src={this.props.logo}
+          alt={this.props.logoAlt}
         />
       </Link>
     )
