@@ -58,7 +58,7 @@ class ParSelect extends Component {
 
 
   render() {
-    const {children} = this.props;
+    const {children, hideLabel} = this.props;
 
     const bulletStyle = {
       margin: '6px 0',
@@ -80,10 +80,10 @@ class ParSelect extends Component {
 
     return (
       <div style={customSize} className={style.containerStyle}>
-        <div className="flex flex-row pv1">
+     {!hideLabel ?  <div className="flex flex-row pv1">
           <span style={bulletStyle} />
           <span className={style.labelStyle}>{this.props.label}</span>
-        </div>
+        </div>: ''}
         <div className="flex flex-column">
           <Select
             clearable={false}
@@ -108,6 +108,7 @@ const arrowRenderer = () =>
 ParSelect.propTypes = {
   customClassName: PropTypes.string,
   disabled: PropTypes.bool,
+  hideLabelhideLabel: PropTypes.bool,
   errorText: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
@@ -125,7 +126,8 @@ ParSelect.propTypes = {
 ParSelect.defaultProps = {
   label: 'Label',
   placeholder: 'Escolha uma opção',
-  noResultsText: 'Nenhum resultado encontrado'
+  noResultsText: 'Nenhum resultado encontrado',
+  hideLabel:false
 }
 
 export default ParSelect 
