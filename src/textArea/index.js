@@ -65,7 +65,7 @@ class TextArea extends Component {
       width: this.props.width
     }
 
-    const {hideLabel} this.props
+    const {hideLabel} = this.props
 
     const inputProps = {
       disabled: this.props.disabled,
