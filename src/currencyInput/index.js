@@ -19,6 +19,7 @@ class CurrencyInput extends Component {
     let containerStyle = "dif flex-column mb2";
     let labelStyle = "pl2 roboto-regular p-f14 gray-02";
     let subtitleStyle = "roboto-regular h1 p-f14 gray-01 p-ti-075";
+    let errorStyle = 'roboto-regular h1 p-f14 kitkat-01 p-ti-075'
 
     if (disabled) {
       inputStyle = inputStyle.concat(" ", "bg-gray-07 input-border-disabled cursor-disabled").replace("gray-02", "gray-04")
@@ -51,6 +52,7 @@ class CurrencyInput extends Component {
       inputStyle,
       labelStyle,
       subtitleStyle,
+      errorStyle
     }
   }
 
@@ -108,10 +110,12 @@ class CurrencyInput extends Component {
       inputStyle,
       labelStyle,
       subtitleStyle,
+      errorStyle
     } = this.getStyle();
 
-    const subtitleText = (errorText && errorText!==' ')? errorText : subtitle;
+    const hasError = errorText && errorText !== ' '
 
+    const subtitleText = (hasError) ? errorText : subtitle;
 
     return (
       <div style={customSize} className={containerStyle}>
@@ -127,7 +131,7 @@ class CurrencyInput extends Component {
             this.props.onChange(floatValue)
           }}
           thousandSeparator={' '} decimalSeparator={','}  />
-        <span className={subtitleStyle}>{subtitleText}</span>
+        <span className={hasError ? errorStyle : subtitleStyle}>{subtitleText}</span>
       </div>
     );
   }

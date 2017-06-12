@@ -78,13 +78,15 @@ class ParSelect extends Component {
 
     const style = this.getStyle()
 
+    const hasError = (this.props.errorText && (this.props.errorText !== ' '))
+
     return (
       <div style={customSize} className={style.containerStyle}>
      {!hideLabel ?  <div className="flex flex-row pv1">
           <span style={bulletStyle} />
           <span className={style.labelStyle}>{this.props.label}</span>
         </div>: ''}
-        <div className="flex flex-column">
+        <div className={"flex flex-column " + (hasError ? 'select-error' : '')}>
           <Select
             clearable={false}
             value={this.props.value}

@@ -496,3 +496,6 @@
   bottom: 100%;
 }
 
+.select-error .Select-control {
+  border-color: var(--kitkat-01);
+}
