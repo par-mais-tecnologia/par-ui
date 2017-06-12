@@ -3,6 +3,39 @@ import { Link } from 'react-router'
 import Avatar from '../avatar'
 
 class Header extends Component {
+
+  getLogo(){
+    if (!this.props.logo) {
+      return ''
+    }
+
+    if (this.props.onLogoClick) {
+      return (
+        <div onClick={() => this.props.onLogoClick()}>
+          <img
+            style={{'width': 150}}
+            className="h25 w4 pointer"
+            src={this.props.logo}
+            alt={this.props.logoAlt}
+          />
+        </div>
+      )
+    }
+
+
+    return (
+      <Link to={this.logoPath}>
+        <img
+          style={{'width': 150}}
+          className="h25 w4 pointer"
+          src={this.logo}
+          alt={this.logoAlt}
+        />
+      </Link>
+    )
+
+  }
+
   render() {
     const {
       logo,
@@ -21,14 +54,7 @@ class Header extends Component {
     return (
       <div className={headerClassName}>
         <div className="flex flex-row">
-          {logo && <Link to={logoPath}>
-            <img
-              style={{'width': 150}}
-              className="h25 w4 pointer"
-              src={logo}
-              alt={logoAlt}
-            />
-          </Link>}
+          {this.getLogo()}
           {(!logo) && <div className="h25 w4" />}
           <div className="roboto-light gray-01 p-f18 pt3">
             {label}
@@ -59,7 +85,9 @@ Header.propTypes = {
   logo: PropTypes.string,
   logoAlt: PropTypes.string,
   logoPath: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  onLogoClick: PropTypes.func,
+  onLogout: PropTypes.func
 }
 
 Header.defaultProps = {
