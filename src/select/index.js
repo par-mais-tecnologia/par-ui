@@ -108,7 +108,7 @@ const arrowRenderer = () =>
 ParSelect.propTypes = {
   customClassName: PropTypes.string,
   disabled: PropTypes.bool,
-  hideLabelhideLabel: PropTypes.bool,
+  hideLabel: PropTypes.bool,
   errorText: PropTypes.string,
   label: PropTypes.string,
   placeholder: PropTypes.string,
