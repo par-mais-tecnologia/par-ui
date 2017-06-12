@@ -65,6 +65,8 @@ class TextArea extends Component {
       width: this.props.width
     }
 
+    const {hideLabel} this.props
+
     const inputProps = {
       disabled: this.props.disabled,
       onBlur: this.handleInputBlur.bind(this),
@@ -77,10 +79,10 @@ class TextArea extends Component {
 
     return (
       <div style={customSize} className={style.containerStyle}>
-        <div className="flex flex-row pv1">
+       {!hideLabel ? <div className="flex flex-row pv1">
           <span style={bulletStyle}/>
           <span className={style.labelStyle}>{this.props.label}</span>
-        </div>
+        </div>:''}
         <textarea style={{resize: 'none', padding: '11px 0px 0px 12px'}} rows={this.props.rows} {...inputProps} type={this.props.type} className={style.inputStyle} placeholder={this.props.placeholder}/>
         <span className={style.errorStyle}>{this.props.errorText}</span>
       </div>
@@ -106,6 +108,7 @@ TextArea.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   rows: PropTypes.number,
+  hideLabel: PropTypes.bool,
 };
 
 TextArea.defaultProps = {
@@ -113,7 +116,8 @@ TextArea.defaultProps = {
   placeholder: "Placeholder",
   requiredColor:"",
   type:'text',
-  rows:1
+  rows:1,
+  hideLabel:false
 };
 
 export default TextArea;
