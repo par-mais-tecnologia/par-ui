@@ -5,7 +5,7 @@ class Checkbox extends Component {
 
   render(){
     const { name, value, errorText, onChange, disabled,
-      item, desc, height, hideDesc,  ...rest } = this.props
+      item, desc, height,   ...rest } = this.props
 
 
     const optional = {}
@@ -32,7 +32,7 @@ class Checkbox extends Component {
             value={value}
             id={this.props.id}
             {...optional}/>
-          <label className={labelClassName} htmlFor={this.props.id}>{!hideDesc?desc:''}</label>
+          <label className={labelClassName} htmlFor={this.props.id}>{desc}</label>
           <div className={checkClassName}></div>
         </div>
         <span className={errorStyle}>{this.props.errorText}</span>
@@ -44,12 +44,10 @@ class Checkbox extends Component {
 
 Checkbox.propTypes = {
   height: PropTypes.number,
-  hideDesc: PropTypes.bool,
 }
 
 Checkbox.defaultProps = {
   height:48,
-  hideDesc:false
 }
 
 export default Checkbox 
