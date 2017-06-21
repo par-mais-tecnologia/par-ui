@@ -81,7 +81,8 @@ class CurrencyInput extends Component {
       subtitle,
       placeholder,
       value,
-      label
+      label,
+      subtitleCustomStyle
     } = this.props
 
 
@@ -131,7 +132,7 @@ class CurrencyInput extends Component {
             this.props.onChange(floatValue)
           }}
           thousandSeparator={' '} decimalSeparator={','}  />
-        <span className={hasError ? errorStyle : subtitleStyle}>{subtitleText}</span>
+        <span style={subtitleCustomStyle} className={hasError ? errorStyle : subtitleStyle}>{subtitleText}</span>
       </div>
     );
   }
@@ -152,6 +153,7 @@ CurrencyInput.propTypes = {
   inputClassName: PropTypes.string,
   errorClassName: PropTypes.string,
   subtitleClassName: PropTypes.string,
+  subtitleCustomStyle: PropTypes.object,
   errorText: PropTypes.string,
   value: PropTypes.any,
   onFocus: PropTypes.func,
