@@ -71,9 +71,9 @@ class Avatar extends Component {
           ...photoInlineStyle,
           height: '100%',
           width: '100%',
-          padding: src ? '' : '6px 0 0 2px',
           fontSize: '96px',
-          transition: '0.2s all'
+          transition: '0.2s all',
+          borderWidth: '2px'
         };
         break;
       }
