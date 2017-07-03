@@ -19,6 +19,9 @@ class ParSelect extends Component {
       containerStyle = containerStyle + ' open-up' 
     }
 
+    containerStyle = containerStyle + ` select-${this.props.size}`
+    containerStyle = containerStyle + ` select-bold-${this.props.boldItems}`
+
     if (this.props.disabled) {
       inputStyle = inputStyle.concat(' ', 'bg-gray-07 input-border-disabled cursor-disabled').replace('gray-02', 'gray-04')
     } else if (this.props.errorText) {
@@ -122,14 +125,18 @@ ParSelect.propTypes = {
   value: PropTypes.any,
   onChange: PropTypes.func,
   direction: PropTypes.string,
-  noResultsText: PropTypes.string
+  noResultsText: PropTypes.string,
+  size: PropTypes.string,
+  boldItems: PropTypes.number
 }
 
 ParSelect.defaultProps = {
   label: 'Label',
   placeholder: 'Escolha uma opção',
   noResultsText: 'Nenhum resultado encontrado',
-  hideLabel:false
+  hideLabel:false,
+  size: 'normal',
+  boldItems: 0
 }
 
 export default ParSelect 
