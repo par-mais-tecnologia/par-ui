@@ -26,6 +26,7 @@
   height: 16px;
   width: 16px;
   left: 16px;
+  top: 16px;
 	z-index: 5;
   background-color: white;
 	transition: border .25s linear;
