@@ -88,7 +88,7 @@ class TextArea extends Component {
       <span style={bulletStyle}/>
       <span className={style.labelStyle}>{this.props.label}</span>
     </div> : ''}
-  <textarea style={{ resize: 'none', padding: '11px 0px 0px 12px' }} rows={this.props.rows} {...inputProps}
+  <textarea style={{ resize: 'none', padding: '11px 12px 11px 12px' }} rows={this.props.rows} {...inputProps}
     type={this.props.type} className={style.inputStyle} placeholder={this.props.placeholder}/>
     {this.props.errorText ? <span className={style.errorStyle}>{this.props.errorText}</span> : null}
     {!hideSubtitle ? <span className={style.subtitleStyle}>{this.props.subtitle}</span> : null}
