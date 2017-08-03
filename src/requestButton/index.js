@@ -2,16 +2,16 @@ import React, { Component } from 'react'
 
 class RequestButton extends Component {
 
-  getButtonStyle() {
+  getButtonStyle(pallete) {
     const defaultStyle = 'word-wrap h2 relative ph3 roboto-regular dif p-f12 justify-around items-center overflow-hidden'
-    let style = ''
+    let style = `pallete-${pallete} `
 
     if (this.props.disabled || this.props.waiting) {
-      style = 'button-disabled-background gray-04 cursor-disabled'
+      style += 'button-disabled-background gray-04 cursor-disabled'
     } else if (this.props.primary) {
-      style = 'button-primary-background white b--cottoncandy-02 bb pointer'
+      style += 'button-primary-background white b--cottoncandy-02 bb pointer'
     } else if (this.props.secondary) {
-      style = 'button-secondary-background button-secondary-color button-secondary-border pointer'
+      style += 'button-secondary-background button-secondary-color button-secondary-border pointer'
     }
 
     if (this.props.customClassName) {
@@ -22,7 +22,7 @@ class RequestButton extends Component {
   }
 
   render() {
-    const style = this.getButtonStyle()
+    const style = this.getButtonStyle(this.props.pallete)
     const customStyle = {
       height: this.props.height,
       width: this.props.width
@@ -47,10 +47,12 @@ RequestButton.propTypes = {
   width: React.PropTypes.number,
   customClassName: React.PropTypes.string,
   waiting: React.PropTypes.bool,
-  loadingIcon: React.PropTypes.string
+  loadingIcon: React.PropTypes.string,
+  pallete: React.PropTypes.string
 }
 
 RequestButton.defaultProps = {
+  pallete: 'cottoncandy',
   label: 'Primary',
   onClick,
   customStyle: '',
