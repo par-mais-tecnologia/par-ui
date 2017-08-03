@@ -96,6 +96,16 @@
 .b--cottoncandy-03 {         border-color: var(--cottoncandy-03); }
 .b--cottoncandy-04 {         border-color: var(--cottoncandy-04); }
 
+.b--blueberry-01 {         border-color: var(--blueberry-01); }
+.b--blueberry-02 {         border-color: var(--blueberry-02); }
+.b--blueberry-03 {         border-color: var(--blueberry-03); }
+.b--blueberry-04 {         border-color: var(--blueberry-04); }
+
+.b--lemon-01{         border-color: var(--lemon-04); }
+.b--grape-01{         border-color: var(--grape-04); }
+
+.b--jam-01{         border-color: var(--jam-04); }
+
 .b--gray-01 {         border-color: var(--gray-01); }
 .b--gray-02 {         border-color: var(--gray-02); }
 .b--gray-03 {         border-color: var(--gray-03); }

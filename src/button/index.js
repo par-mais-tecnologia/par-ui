@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 
 class Button extends Component {
 
-  getButtonStyle() {
+  getButtonStyle(pallete) {
     const {
       disabled,
       primary,
@@ -11,14 +11,14 @@ class Button extends Component {
     } = this.props;
 
     const defaultStyle = 'word-wrap h2 ph3 roboto-regular dif p-f12 justify-around items-center overflow-hidden transition-02'
-    let style = ''
+    let style = `pallete-${pallete} `
 
     if (disabled) {
-      style = 'button-disabled-background gray-04 cursor-disabled'
+      style += 'button-disabled-background gray-04 cursor-disabled'
     } else if (primary) {
-      style = 'button-primary-background white b--cottoncandy-02 bb pointer'
+      style += 'button-primary-background white b--cottoncandy-02 bb pointer'
     } else if (secondary) {
-      style = 'button-secondary-background button-secondary-color button-secondary-border pointer'
+      style += 'button-secondary-background button-secondary-color button-secondary-border pointer'
     }
 
     if (customClassName) {
@@ -29,7 +29,7 @@ class Button extends Component {
   }
 
   render() {
-    const style = this.getButtonStyle()
+    const style = this.getButtonStyle(this.props.pallete)
     const customStyle = 
       this.props.customStyle ? this.props.customStyle : {
         height: this.props.height,
@@ -54,10 +54,12 @@ Button.propTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
   customClassName: PropTypes.string,
-  customStyle: PropTypes.object
+  customStyle: PropTypes.object,
+  pallete: PropTypes.string
 }
 
 Button.defaultProps = {
+  pallete: 'cottoncandy',
   label: 'Primary',
   onClick,
   customStyle: null

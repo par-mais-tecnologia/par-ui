@@ -2,32 +2,69 @@
 
 /*Parmais Custom Button Style */
 
+
+/************** BLUEBERRY ********************/
+
 /* Primary button*/
-.button-primary-background{
+
+.pallete-blueberry.button-primary-background{
+    background: var(--blueberry-01);
+}
+.pallete-blueberry.button-primary-background:hover{
+    background: var(--blueberry-02);
+}
+
+/* Secondary button*/
+.pallete-blueberry.button-secondary-background{
+}
+.pallete-blueberry.button-secondary-background:hover{
+    background: var(--blueberry-02);
+}
+
+.pallete-blueberry.button-secondary-border{
+   border: solid 1px var(--blueberry-01)
+}
+.pallete-blueberry.button-secondary-border:hover{
+    border: solid 1px var(--blueberry-02)
+}
+
+.pallete-blueberry.button-secondary-color{
+    color: var(--blueberry-01);
+}
+.pallete-blueberry.button-secondary-color:hover{
+    color: var(--white);
+}
+
+
+/************** COTTONCANDY ******************/
+
+/* Primary button*/
+
+.pallete-cottoncandy.button-primary-background{
     background: var(--cottoncandy-01);
 }
-.button-primary-background:hover{
+.pallete-cottoncandy.button-primary-background:hover{
     background: var(--cottoncandy-02);
 }
 
 /* Secondary button*/
-.button-secondary-background{
+.pallete-cottoncandy.button-secondary-background{
 }
-.button-secondary-background:hover{
+.pallete-cottoncandy.button-secondary-background:hover{
     background: var(--cottoncandy-02);
 }
 
-.button-secondary-border{
+.pallete-cottoncandy.button-secondary-border{
    border: solid 1px var(--cottoncandy-01)
 }
-.button-secondary-border:hover{
+.pallete-cottoncandy.button-secondary-border:hover{
     border: solid 1px var(--cottoncandy-02)
 }
 
-.button-secondary-color{
+.pallete-cottoncandy.button-secondary-color{
     color: var(--cottoncandy-01);
 }
-.button-secondary-color:hover{
+.pallete-cottoncandy.button-secondary-color:hover{
     color: var(--white);
 }
 
