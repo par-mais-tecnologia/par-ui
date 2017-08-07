@@ -24,6 +24,13 @@ export default {
           loader: 'sass-loader' // compiles Sass to CSS
         }]
       },
+      {
+        test: /\.svg/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {}
+        }
+      },
     ],
   },
   devtool: isProd ? false : 'source-map',

@@ -30,7 +30,7 @@ class RequestButton extends Component {
 
     return (
       <div style={customStyle} className={style} onClick={this.props.onClick}>
-        {this.props.waiting && <img style={{left: 8}} className="absolute" src={this.props.loadingIcon} />}
+        {this.props.waiting && <img style={{left: 8}} className="absolute" src={require('./loading.svg')} />}
         <span className="tc" style={{paddingLeft: this.props.waiting ? 12 : 0}}>{this.props.label}</span>
       </div>
     )
@@ -38,6 +38,7 @@ class RequestButton extends Component {
 }
 
 RequestButton.propTypes = {
+  pallete: React.PropTypes.string,
   primary: React.PropTypes.bool,
   secondary: React.PropTypes.bool,
   disabled: React.PropTypes.bool,
@@ -52,6 +53,7 @@ RequestButton.propTypes = {
 }
 
 RequestButton.defaultProps = {
+  loadingIcon: './loading.svg',
   pallete: 'cottoncandy',
   label: 'Primary',
   onClick,

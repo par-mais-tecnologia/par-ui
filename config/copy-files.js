@@ -4,7 +4,7 @@ import fse from 'fs-extra';
 
 const files = [
   'README.md',
-  'LICENSE',
+  'LICENSE'
 ];
 
 Promise.all(
@@ -13,6 +13,7 @@ Promise.all(
 .then(() => createPackageFile());
 
 fse.copy('src/style/fonts/', 'build/style/fonts/', err => console.log(err));
+//fse.copy('src/requestButton/loading.svg/', 'build/requestButton/loading.svg/', err => console.log(err));
 
 function copyFile(file) {
   const buildPath = resolveBuildPath(file);
