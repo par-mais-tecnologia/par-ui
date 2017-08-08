@@ -115,8 +115,8 @@ class DateInput extends Component {
                    className={inputStyle}
                    placeholder={this.props.placeholder}
                    maskChar={null} mask={"99/99/9999"}/>
-        <span className={ageStyle}>{ageText}</span>
-        {this.props.showError && <span className={errorStyle}>{this.props.errorText}</span>}
+        {(this.props.showError && this.props.errorText) ? '' : <span className={ageStyle}>{ageText}</span>}
+        {(this.props.showError && this.props.errorText) ? <span className={errorStyle}>{this.props.errorText}</span>:''}
       </div>
     );
   }

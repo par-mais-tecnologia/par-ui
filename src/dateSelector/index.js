@@ -41,7 +41,8 @@ class DateSelector extends Component {
         <DateInput 
           inputClassName={this.props.inputClassName} 
           disabled={this.props.disabled}
-          showError={false}
+          showError={true}
+          errorText={this.props.errorText}
           value={this.props.value} onChange={this.props.onChange} label='DATA DE NASCIMENTO'
                    requiredColor={this.props.requiredColor}/>
         <div onClick={this.handleDatePickerOpen.bind(this)} style={{
@@ -70,11 +71,13 @@ class DateSelector extends Component {
 DateSelector.propTypes = {
   onChange: PropTypes.func,
   inputClassName: PropTypes.string,
-  requiredColor: PropTypes.string
+  requiredColor: PropTypes.string,
+  errorText: PropTypes.string,
 }
 DateSelector.defaultProps = {
   value: '',
-  inputClassName:''
+  inputClassName:'',
+  errorText:''
 }
 
 export default DateSelector
