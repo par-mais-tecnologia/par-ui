@@ -95,7 +95,7 @@ class Avatar extends Component {
       customClassName
     } = this.props;
 
-    let className = src ? 'br-100 ba' : 'br-100 ba roboto-regular f5 white tc bg-gray-06 flex justify-center items-center'
+    let className = src ? 'br-100 ba' : 'br-100 ba roboto-regular f5 white tc bg-gray-06 flex justify-center items-center overflow-hidden'
 
     className = customClassName ? className + ' ' + customClassName : className
 
