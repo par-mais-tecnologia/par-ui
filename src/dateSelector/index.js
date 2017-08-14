@@ -36,6 +36,9 @@ class DateSelector extends Component {
 
   render() {
     let date = this.props.value.length === 10 ? moment(this.props.value, 'DD/MM/YYYY') : moment()
+
+    const { pallete } = this.props
+
     return (
       <div className=" flex-row dif bg-gray-03 w-100">
         <DateInput 
@@ -49,7 +52,7 @@ class DateSelector extends Component {
           height: '48px',
           width: '48px',
           marginTop: '26px',
-          backgroundColor: this.state.isDatePickerOpen ? 'var(--cottoncandy-02)' : ''
+          backgroundColor: this.state.isDatePickerOpen ? `var(--${pallete}-02)` : ''
         }} className="flex flex-center-all">
           <DatePickerModel
             value={this.props.value}
@@ -60,7 +63,7 @@ class DateSelector extends Component {
               this.handleClickOutside()
             }}
             customInput={<Calendar size={28} color={this.state.isDatePickerOpen ? 'white' : 'var(--gray-02)'}
-                                   background={this.state.isDatePickerOpen ? 'var(--cottoncandy-02)' : ''}/>}
+                                   background={this.state.isDatePickerOpen ? `var(--${pallete}-02)` : ''}/>}
             popoverTargetOffset="7px -200px"/>
         </div>
       </div>
@@ -73,8 +76,10 @@ DateSelector.propTypes = {
   inputClassName: PropTypes.string,
   requiredColor: PropTypes.string,
   errorText: PropTypes.string,
+  pallete: PropTypes.string
 }
 DateSelector.defaultProps = {
+  pallete: 'cottoncandy',
   value: '',
   inputClassName:'',
   errorText:''
