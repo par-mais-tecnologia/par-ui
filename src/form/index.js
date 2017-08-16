@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 
-const formTextField= ({pallete, className = '', children, ...rest}) => {
+class ParForm extends Component {
+  render(){
 
-  const formPallete = `form-${pallete} ${className}`
+    const { pallete, children, className, ...rest } = this.props
 
-  return <form className={formPallete} {...rest}> 
-    {children}
-  </form>
+    const formPallete = `form-${pallete} ${className}`
+
+    return (
+      <form className={formPallete} {...rest}> 
+        {children}
+      </form>
+
+    )
+  }
 }
 
+ParForm.propTypes = {
+  pallete: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node
+}
 
+ParForm.defaultProps = {
+  pallete: 'cottoncandy',
+  className: '',
+}
 
-export default formTextField 
+export default ParForm 

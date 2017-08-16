@@ -392,6 +392,16 @@
   outline: 0; 
 }
 
+.form-cottoncandy .Select.is-focused .Select-control{
+  border: 1px solid var(--cottoncandy-01);
+  outline: 0; 
+}
+
+.form-blueberry .Select.is-focused .Select-control{
+  border: 1px solid var(--blueberry-01);
+  outline: 0; 
+}
+
 .Select-control {
   height: 48px;
   border-radius: 0px;
@@ -400,6 +410,16 @@
 
 .is-focused:not(.is-open) > .Select-control {
   border: 1px solid var(--cottoncandy-01);
+  box-shadow: none;
+}
+
+.form-cottoncandy .is-focused:not(.is-open) > .Select-control {
+  border: 1px solid var(--cottoncandy-01);
+  box-shadow: none;
+}
+
+.form-blueberry .is-focused:not(.is-open) > .Select-control {
+  border: 1px solid var(--blueberry-01);
   box-shadow: none;
 }
 
@@ -463,6 +483,16 @@
   color: white;
 }
 
+.form-cottoncandy .Select-option.is-focused {
+  background-color: var(--cottoncandy-01); 
+  color: white;
+}
+
+.form-blueberry .Select-option.is-focused {
+  background-color: var(--blueberry-01); 
+  color: white;
+}
+
 .Select-down-arrow {
   border: 8px solid var(--gray-02);
   border-bottom-color: transparent;
@@ -476,6 +506,19 @@
 
 .Select.is-focused .Select-down-arrow {
   border: 8px solid var(--cottoncandy-01);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.form-cottoncandy .Select.is-focused .Select-down-arrow {
+  border: 8px solid var(--cottoncandy-01);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.form-blueberry .Select.is-focused .Select-down-arrow {
+  border: 8px solid var(--blueberry-01);
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;

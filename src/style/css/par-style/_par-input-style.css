@@ -46,3 +46,14 @@
     left: 12px;
     color: var(--gray-02);
 }
+
+.form-blueberry .input-border:focus {
+  border: 1px solid var(--blueberry-01);
+  outline: 0;
+}
+/*Parmais Custom Button Style */
+
+.form-cottoncandy .input-border:focus{
+  border: 1px solid var(--cottoncandy-01);
+  outline: 0;
+}
