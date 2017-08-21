@@ -118,6 +118,8 @@ class CurrencyInput extends Component {
 
     const subtitleText = (hasError) ? errorText : subtitle;
 
+    console.log(value)
+
     return (
       <div style={customSize} className={containerStyle}>
         {label && <Label errorText={errorText} labelStyle={labelStyle} text={label} bulletColor={requiredColor}/>}

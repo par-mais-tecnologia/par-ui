@@ -3,7 +3,7 @@ import Select from '../../select'
 
 const FormSelectField = ({ input: { value, onChange }, meta: { error } , ...restInput }) => {
 
-  const newValue = (typeof value === 'string') ? value : value.value
+  const newValue = (typeof value === 'object' && value !== null) ? value.value : value
 
 
   return (
