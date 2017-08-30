@@ -82,7 +82,8 @@ class CurrencyInput extends Component {
       placeholder,
       value,
       label,
-      subtitleCustomStyle
+      subtitleCustomStyle,
+      type
     } = this.props
 
 
@@ -103,7 +104,8 @@ class CurrencyInput extends Component {
       onBlur: this.handleInputBlur.bind(this),
       onChange: this.handleInputChange.bind(this),
       onFocus: this.handleInputFocus.bind(this),
-      value: value
+      value: value,
+      type: type
     };
 
     const {
@@ -118,8 +120,6 @@ class CurrencyInput extends Component {
 
     const subtitleText = (hasError) ? errorText : subtitle;
 
-    console.log(value)
-
     return (
       <div style={customSize} className={containerStyle}>
         {label && <Label errorText={errorText} labelStyle={labelStyle} text={label} bulletColor={requiredColor}/>}
@@ -128,9 +128,10 @@ class CurrencyInput extends Component {
           {...inputProps}
           placeholder={placeholder}
           className={inputStyle}
-          decimalPrecision={true}
+          decimalPrecision={2}
+          type="tel"
           onChange={(e, value) => {
-            let floatValue = value ? parseFloat(value) : value
+            let floatValue = value.value ? parseFloat(value.value) : value.value
             this.props.onChange(floatValue)
           }}
           thousandSeparator={' '} decimalSeparator={','}  />
