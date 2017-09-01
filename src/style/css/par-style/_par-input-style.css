@@ -58,7 +58,7 @@
   outline: 0;
 }
 
-.form-cottoncandy .input-border:focus{
+.form-fern .input-border:focus{
   border: 1px solid var(--fern-01);
   outline: 0;
 }
