@@ -2,6 +2,37 @@
 
 /*Parmais Custom Button Style */
 
+/************** FERN *************************/
+
+/* Primary button*/
+
+.pallete-fern.button-primary-background{
+    background: var(--fern-01);
+}
+.pallete-fern.button-primary-background:hover{
+    background: var(--fern-02);
+}
+
+/* Secondary button*/
+.pallete-fern.button-secondary-background{
+}
+.pallete-fern.button-secondary-background:hover{
+    background: var(--fern-02);
+}
+
+.pallete-fern.button-secondary-border{
+   border: solid 1px var(--fern-01);
+}
+.pallete-fern.button-secondary-border:hover{
+    border: solid 1px var(--fern-02);
+}
+
+.pallete-fern.button-secondary-color{
+    color: var(--fern-01);
+}
+.pallete-fern.button-secondary-color:hover{
+    color: var(--white);
+}
 
 /************** BLUEBERRY ********************/
 

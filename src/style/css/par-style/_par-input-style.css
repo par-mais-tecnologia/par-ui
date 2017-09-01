@@ -57,3 +57,8 @@
   border: 1px solid var(--cottoncandy-01);
   outline: 0;
 }
+
+.form-cottoncandy .input-border:focus{
+  border: 1px solid var(--fern-01);
+  outline: 0;
+}

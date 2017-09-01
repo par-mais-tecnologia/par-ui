@@ -423,6 +423,11 @@
   box-shadow: none;
 }
 
+.form-blueberry .is-focused:not(.is-open) > .Select-control {
+  border: 1px solid var(--fern-01);
+  box-shadow: none;
+}
+
 .Select-placeholder {
   font-family: "Roboto Regular";
   font-size: 18px;
@@ -519,6 +524,12 @@
 }
 .form-blueberry .Select.is-focused .Select-down-arrow {
   border: 8px solid var(--blueberry-01);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.form-fern .Select.is-focused .Select-down-arrow {
+  border: 8px solid var(--fern-01);
   border-bottom-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
