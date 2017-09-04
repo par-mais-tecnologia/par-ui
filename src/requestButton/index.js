@@ -23,7 +23,7 @@ class RequestButton extends Component {
 
   render() {
     const style = this.getButtonStyle(this.props.pallete)
-    const customStyle = {
+    const customStyle = this.props.customStyle ? this.props.customStyle : {
       height: this.props.height,
       width: this.props.width
     }
