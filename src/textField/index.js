@@ -117,6 +117,7 @@ class TextInput extends Component {
         {this.props.label && <Label errorText={this.props.errorText} labelStyle={this.props.labelStyle} text={this.props.label} bulletColor={this.props.requiredColor}/>}
         <div className="flex flex-column">
           {inputElement}
+          {this.props.subtext ? <span className="roboto-regular h1 p-f14 gray-01" style={{paddingLeft: '0.75rem'}}>{this.props.subtext}</span> : null}
           {!this.props.hideError ? <span className={style.errorStyle}>{this.props.errorText}</span> : ''}
         </div>
       </div>
@@ -143,7 +144,8 @@ TextInput.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onKeyUp: PropTypes.func,
-  hideError: PropTypes.bool
+  hideError: PropTypes.bool,
+  subtext: PropTypes.string
 }
 
 TextInput.defaultProps = {
