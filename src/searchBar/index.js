@@ -24,6 +24,7 @@ class SearchBar extends Component {
       customClassName,
       inputClassName,
       containerClassName,
+      pallete
     } = this.props;
 
     let inputStyle = "roboto-regular gray-02 h2 p-f18 input-text-indent-12 bn placeholder";
@@ -31,7 +32,7 @@ class SearchBar extends Component {
 
 
     if(state.isFocused===true){
-      containerStyle = containerStyle.replace('b--gray-04', ' b--cottoncandy-01')
+      containerStyle = containerStyle.replace('b--gray-04', ` b--${pallete}-01`)
     }
 
     if (customClassName) {
@@ -110,13 +111,15 @@ SearchBar.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
+  pallete: PropTypes.string
 };
 
 SearchBar.defaultProps = {
   type: 'text',
   placeholder: 'Search',
   height:40,
-  width:280
+  width:280,
+  pallete: 'cottoncandy'
 };
 
 SearchBar.state = {
