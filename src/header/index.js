@@ -26,8 +26,8 @@ class Header extends Component {
     return (
       <Link to={this.props.logoPath}>
         <img
-          style={{'width': 150}}
-          className="h25 w4 pointer"
+          style={{'width': 150, cursor: this.props.cursor}}
+          className="h25 w4"
           src={this.props.logo}
           alt={this.props.logoAlt}
         />
@@ -87,7 +87,8 @@ Header.propTypes = {
   logoPath: PropTypes.string,
   className: PropTypes.string,
   onLogoClick: PropTypes.func,
-  onLogout: PropTypes.func
+  onLogout: PropTypes.func,
+  cursor: PropTypes.string
 }
 
 Header.defaultProps = {
@@ -98,7 +99,8 @@ Header.defaultProps = {
   logoAlt: 'Default img alt',
   logoPath: '/',
   onLogout: defaultLogout,
-  className: ''
+  className: '',
+  cursor: 'pointer'
 }
 
 function defaultLogout() {
