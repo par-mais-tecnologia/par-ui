@@ -13,8 +13,8 @@ class Header extends Component {
       return (
         <div onClick={() => this.props.onLogoClick()}>
           <img
-            style={{'width': 150}}
-            className="h25 w4 pointer"
+            style={{'width': 150, cursor: this.props.cursor}}
+            className="h25 w4"
             src={this.props.logo}
             alt={this.props.logoAlt}
           />
