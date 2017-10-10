@@ -4,8 +4,8 @@ import parUiEllipsis from './ellipsis'
 
 class ElidedTextBox extends Component {
   render() {
-    const { text } = this.props;
-    return <div>{text}</div>
+    const { text, className } = this.props;
+    return <div className={className}>{text}</div>
   }
 }
 
