@@ -9,7 +9,7 @@ class RequestButton extends Component {
     if (this.props.disabled || this.props.waiting) {
       style += 'button-disabled-background gray-04 cursor-disabled'
     } else if (this.props.primary) {
-      style += 'button-primary-background white b--cottoncandy-02 bb pointer'
+      style += `button-primary-background white b--${pallete}-02 bb pointer`
     } else if (this.props.secondary) {
       style += 'button-secondary-background button-secondary-color button-secondary-border pointer'
     }

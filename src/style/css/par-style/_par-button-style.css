@@ -98,6 +98,38 @@
 .pallete-cottoncandy.button-secondary-color:hover{
     color: var(--white);
 }
+ 
+/************** BLOOD ******************/
+
+/* Primary button*/
+
+.pallete-blood.button-primary-background{
+    background: var(--blood-01);
+}
+.pallete-blood.button-primary-background:hover{
+    background: var(--blood-02);
+}
+
+/* Secondary button*/
+.pallete-blood.button-secondary-background{
+}
+.pallete-blood.button-secondary-background:hover{
+    background: var(--blood-02);
+}
+
+.pallete-blood.button-secondary-border{
+   border: solid 1px var(--blood-01)
+}
+.pallete-blood.button-secondary-border:hover{
+    border: solid 1px var(--blood-02)
+}
+
+.pallete-blood.button-secondary-color{
+    color: var(--blood-01);
+}
+.pallete-blood.button-secondary-color:hover{
+    color: var(--white);
+}
 
 /* Disabled button*/
 .button-disabled-background{

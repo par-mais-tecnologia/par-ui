@@ -16,7 +16,7 @@ class Button extends Component {
     if (disabled) {
       style += 'button-disabled-background gray-04 cursor-disabled'
     } else if (primary) {
-      style += 'button-primary-background white b--cottoncandy-02 bb pointer'
+      style += `button-primary-background white b--${pallete}-02 bb pointer`
     } else if (secondary) {
       style += 'button-secondary-background button-secondary-color button-secondary-border pointer'
     }
