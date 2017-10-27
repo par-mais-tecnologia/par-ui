@@ -452,7 +452,16 @@
   border-bottom: 1px solid var(--gray-04);
 }
 
-.Select-option, .Select-noresults {
+.Select-option {
+  display: flex;
+  align-items: center;
+  border-radius: 0px;
+  color: var(--gray-02);
+  font-family: Roboto Regular;
+  font-size: 18px;
+}
+
+.Select-noresults {
   height: 48px;
   display: flex;
   align-items: center;
