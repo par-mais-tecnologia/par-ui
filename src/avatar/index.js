@@ -40,7 +40,6 @@ class Avatar extends Component {
         photoInlineStyle = {...photoInlineStyle,
           height: '86px',
           width: '86px',
-          padding:src?'':'6px 0 0 0',
           transition: '0.2s all',
           fontSize:'56px'
         };
@@ -54,10 +53,8 @@ class Avatar extends Component {
         photoInlineStyle = {...photoInlineStyle,
           height: '126px',
           width: '126px',
-          padding:src?'':'6px 0 0 2px',
           transition: '0.2s all',
           fontSize:'96px'
-
         };
         break;
       }
