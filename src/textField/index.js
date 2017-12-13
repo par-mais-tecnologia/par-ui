@@ -74,7 +74,7 @@ class TextInput extends Component {
   }
 
   render() {
-    const {children} = this.props;
+    const {children, customClassName} = this.props;
 
     const bulletStyle = {
       margin: '6px 0',
@@ -104,7 +104,7 @@ class TextInput extends Component {
         {
           ...inputProps,
           ...children.props,
-          className: style.inputStyle,
+          className: style.inputStyle + ' ' + customClassName,
           type:this.props.type,
           placeholder:this.props.placeholder
         });
@@ -151,7 +151,8 @@ TextInput.propTypes = {
 TextInput.defaultProps = {
   placeholder: 'Placeholder',
   type: 'text',
-  hideError: false
+  hideError: false,
+  customClassName: ''
 }
 
 export default TextInput

@@ -83,7 +83,8 @@ class CurrencyInput extends Component {
       value,
       label,
       subtitleCustomStyle,
-      type
+      type,
+      customClassName
     } = this.props
 
 
@@ -127,7 +128,7 @@ class CurrencyInput extends Component {
         <NumberFormat
           {...inputProps}
           placeholder={placeholder}
-          className={inputStyle}
+          className={inputStyle + ' ' + customClassName}
           decimalPrecision={2}
           type="tel"
           onChange={(e, value) => {
@@ -169,6 +170,7 @@ CurrencyInput.defaultProps = {
   placeholder: "000 000 000,00",
   requiredColor: "",
   type: 'text',
+  customClassName: ''
 };
 
 export default CurrencyInput;
