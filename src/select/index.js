@@ -61,7 +61,7 @@ class ParSelect extends Component {
 
 
   render() {
-    const {children, hideLabel} = this.props;
+    const {children, hideLabel, customClassName} = this.props;
 
     const bulletStyle = {
       margin: '6px 0',
@@ -99,6 +99,7 @@ class ParSelect extends Component {
             noResultsText={this.props.noResultsText}
             onChange={this.handleChange}
             disabled={this.props.disabled}
+            className={customClassName}
           />
           <span className={style.errorStyle}>{this.props.errorText}</span>
         </div>
@@ -136,7 +137,8 @@ ParSelect.defaultProps = {
   noResultsText: 'Nenhum resultado encontrado',
   hideLabel:false,
   size: 'normal',
-  boldItems: 0
+  boldItems: 0,
+  customClassName: ''
 }
 
 export default ParSelect 
