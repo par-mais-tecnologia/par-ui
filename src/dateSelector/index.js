@@ -37,16 +37,18 @@ class DateSelector extends Component {
   render() {
     let date = this.props.value.length === 10 ? moment(this.props.value, 'DD/MM/YYYY') : moment()
 
-    const { pallete } = this.props
+    const { label="DATA DE NASCIMENTO", pallete } = this.props
+    const { containerClassName = "flex-row dif bg-gray-03 w-100" } = this.props
 
     return (
-      <div className=" flex-row dif bg-gray-03 w-100">
+      <div className={containerClassName}>
         <DateInput 
           inputClassName={this.props.inputClassName} 
           disabled={this.props.disabled}
           showError={true}
+          showAgeText={this.props.showAgeText}
           errorText={this.props.errorText}
-          value={this.props.value} onChange={this.props.onChange} label='DATA DE NASCIMENTO'
+          value={this.props.value} onChange={this.props.onChange} label={label}
                    requiredColor={this.props.requiredColor}/>
         <div onClick={this.handleDatePickerOpen.bind(this)} style={{
           height: '48px',
@@ -74,15 +76,19 @@ class DateSelector extends Component {
 DateSelector.propTypes = {
   onChange: PropTypes.func,
   inputClassName: PropTypes.string,
+  containerClassName: PropTypes.string,
   requiredColor: PropTypes.string,
   errorText: PropTypes.string,
-  pallete: PropTypes.string
+  pallete: PropTypes.string,
+  label: PropTypes.string,
+  showAgeText: PropTypes.bool
 }
 DateSelector.defaultProps = {
   pallete: 'cottoncandy',
   value: '',
   inputClassName:'',
-  errorText:''
+  errorText:'',
+  showAgeText: true
 }
 
 export default DateSelector

@@ -115,7 +115,7 @@ class DateInput extends Component {
                    className={inputStyle}
                    placeholder={this.props.placeholder}
                    maskChar={null} mask={"99/99/9999"}/>
-        {(this.props.showError && this.props.errorText) ? '' : <span className={ageStyle}>{ageText}</span>}
+        {showAgeText && ((this.props.showError && this.props.errorText) ? '' : <span className={ageStyle}>{ageText}</span>)}
         {(this.props.showError && this.props.errorText) ? <span className={errorStyle}>{this.props.errorText}</span>:''}
       </div>
     );
@@ -141,7 +141,8 @@ DateInput.propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   children: PropTypes.node,
-  showError: PropTypes.bool
+  showError: PropTypes.bool,
+  showAgeText: PropTypes.bool
 };
 
 DateInput.defaultProps = {
@@ -150,7 +151,8 @@ DateInput.defaultProps = {
   requiredColor: "",
   type: 'text',
   value:'',
-  showError: true
+  showError: true,
+  showAgeText: true
 };
 
 export default DateInput;
