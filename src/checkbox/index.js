@@ -5,7 +5,7 @@ class Checkbox extends Component {
 
   render(){
     const { name, value, errorText, onChange, disabled,
-      item, desc, height,   ...rest } = this.props
+      item, desc,  ...rest } = this.props
 
 
     const optional = {}
@@ -26,7 +26,7 @@ class Checkbox extends Component {
 
     return (
       <div>
-        <div style={{height:height}} className="flex items-center par-ui-checkbox">
+        <div style={{marginBottom: 20}} className="flex items-start par-ui-checkbox">
           <input
             type="checkbox"
             value={value}
@@ -43,11 +43,9 @@ class Checkbox extends Component {
 
 
 Checkbox.propTypes = {
-  height: PropTypes.number,
 }
 
 Checkbox.defaultProps = {
-  height:48,
 }
 
 export default Checkbox 

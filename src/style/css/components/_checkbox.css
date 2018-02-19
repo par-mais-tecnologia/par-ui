@@ -11,6 +11,7 @@
   left: 16px;
   background: white;
   border: 1px solid var(--gray-04);
+  margin-top: 2px;
 }
 .par-ui-checkbox label{
   padding-left: 48px;
