@@ -1,5 +1,6 @@
 .par-ui-checkbox{
   position: relative;
+  z-index: 0;
 }
 
 .par-ui-checkbox .check{
