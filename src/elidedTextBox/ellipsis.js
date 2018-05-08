@@ -17,7 +17,10 @@ const ellipsis = (ComposedComponent, maxLines, ellipsisText = '...') => {
     }
 
     componentDidMount() {
-      this.checkEllipsis()
+      this.checkEllipsis();
+      window.addEventListener('resize', () => {
+        this.checkEllipsis();
+    });
     }
 
     componentDidUpdate() {
@@ -35,6 +38,7 @@ const ellipsis = (ComposedComponent, maxLines, ellipsisText = '...') => {
       const height = this.getDOMNodeProperty(node, 'height').replace('px', '')
 
       const numberOfLines = height / lineHeight
+      let elideCalc = numberOfLines > maxLines;
 
       if (numberOfLines > maxLines) {
         const currentText = this.state.text
@@ -47,6 +51,13 @@ const ellipsis = (ComposedComponent, maxLines, ellipsisText = '...') => {
       } else if (this.hasTextChanges()) {
         this.setState({ originalText: `${this.props.text}`, text: `${this.props.text}` })
       }
+
+      this.props.onElidedCalc(elideCalc || this.state.text.endsWith(ellipsisText), {
+        text: this.state.text,
+        numberOfLines,
+        maxLines,
+        elideCalc,
+      });
     }
 
     hasTextChanges() {
