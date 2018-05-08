@@ -11,10 +11,12 @@ class ElidedTextBox extends Component {
 
 ElidedTextBox.propTypes = {
   text: PropTypes.string.isRequired,
+  onElidedCalc: PropTypes.func,
 }
 
 ElidedTextBox.defaultProps = {
   text: '',
+  onElidedCalc: () => {},
 }
 
 export default parUiEllipsis(ElidedTextBox, 2, '...');
