@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Flag extends Component {
   render() {
@@ -14,7 +15,7 @@ class Flag extends Component {
   }
 }
 
-Flag.propTypes = {
+Flag.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

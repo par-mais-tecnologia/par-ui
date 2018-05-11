@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Columnchart extends Component {
   render() {
@@ -28,7 +29,7 @@ class Columnchart extends Component {
   }
 }
 
-Columnchart.propTypes = {
+Columnchart.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

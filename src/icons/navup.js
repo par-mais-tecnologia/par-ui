@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Navup extends Component {
   render() {
@@ -25,7 +26,7 @@ class Navup extends Component {
   }
 }
 
-Navup.propTypes = {
+Navup.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

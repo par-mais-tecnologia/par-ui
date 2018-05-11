@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class PlusBG extends Component {
   render() {
@@ -14,7 +15,7 @@ class PlusBG extends Component {
   }
 }
 
-PlusBG.propTypes = {
+PlusBG.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

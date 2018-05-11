@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Linechart extends Component {
   render() {
@@ -22,7 +23,7 @@ class Linechart extends Component {
   }
 }
 
-Linechart.propTypes = {
+Linechart.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,
