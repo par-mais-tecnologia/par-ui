@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Lock extends Component {
   render() {
@@ -20,7 +21,7 @@ class Lock extends Component {
   }
 }
 
-Lock.propTypes = {
+Lock.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Clock extends Component {
 
@@ -46,7 +47,7 @@ class Clock extends Component {
   }
 }
 
-Clock.propTypes = {
+Clock.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

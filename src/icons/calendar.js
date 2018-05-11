@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Calendar extends Component {
   render() {
@@ -41,7 +42,7 @@ class Calendar extends Component {
   }
 }
 
-Calendar.propTypes = {
+Calendar.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

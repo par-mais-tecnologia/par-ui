@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Pig extends Component {
   render() {
@@ -20,7 +21,7 @@ class Pig extends Component {
   }
 }
 
-Pig.propTypes = {
+Pig.PropTypes = {
   height: PropTypes.number,
   width: PropTypes.number,
   size: PropTypes.number,

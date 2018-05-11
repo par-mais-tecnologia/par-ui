@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Hammer extends Component {
   render() {
@@ -26,7 +27,7 @@ class Hammer extends Component {
   }
 }
 
-Hammer.propTypes = {
+Hammer.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

@@ -1,6 +1,5 @@
-import React, {Component, PropTypes} from 'react';
-
-
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Check extends Component {
   render() {
@@ -27,7 +26,7 @@ class Check extends Component {
   }
 }
 
-Check.propTypes = {
+Check.PropTypes = {
   size: PropTypes.number,
   height: PropTypes.number,
   width: PropTypes.number,

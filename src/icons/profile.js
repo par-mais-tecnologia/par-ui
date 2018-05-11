@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Profile extends Component {
   render() {
@@ -17,7 +18,7 @@ class Profile extends Component {
   }
 }
 
-Profile.propTypes = {
+Profile.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,

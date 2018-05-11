@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Contract extends Component {
   render() {
@@ -24,7 +25,7 @@ class Contract extends Component {
   }
 }
 
-Contract.propTypes = {
+Contract.PropTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
   background: PropTypes.string,
