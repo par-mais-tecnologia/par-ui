@@ -100,6 +100,7 @@ class ParSelect extends Component {
             onChange={this.handleChange}
             disabled={this.props.disabled}
             className={customClassName}
+            searchable={this.props.searchable}
           />
           <span className={style.errorStyle}>{this.props.errorText}</span>
         </div>
@@ -128,7 +129,8 @@ ParSelect.propTypes = {
   direction: PropTypes.string,
   noResultsText: PropTypes.string,
   size: PropTypes.string,
-  boldItems: PropTypes.number
+  boldItems: PropTypes.number,
+  searchable: PropTypes.bool
 }
 
 ParSelect.defaultProps = {
@@ -138,7 +140,8 @@ ParSelect.defaultProps = {
   hideLabel:false,
   size: 'normal',
   boldItems: 0,
-  customClassName: ''
+  customClassName: '',
+  searchable: true
 }
 
 export default ParSelect 
