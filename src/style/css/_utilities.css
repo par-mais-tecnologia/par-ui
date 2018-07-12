@@ -19,6 +19,10 @@
   margin-left: auto;
 }
 
+.disable-element-click {
+    pointer-events: none;
+}
+
 @media (--breakpoint-not-small){
   .center-ns {
     margin-right: auto;
