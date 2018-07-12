@@ -1,16 +1,49 @@
-![Logo][]
-# Parmais React Components
+![Logo]
 
-- __Lead Maintainer:__ [Diego Laucsen][Lead]
-- __Sponsor:__ [Par Mais][Sponsor]
-- __Node:__ 6.x
+> A library of reusable React components that we are using at Par Mais.
+  
+## Available components
 
-Main contributors:
-* [João Henrique Cizeski Balestrin][jhbalestrin]
-* [Tiago Pereira][tiago-pereira]
+||||
+|:----------:|:----------:|:----------:|
+|[avatar]|[badge]|[button]|
+|[card]|[checkbox]|[cnpjInput]|
+|[cpfInput]|[currencyInput]|[dateInput]|
+|[dateSelector]|[elidedTextBox]|[form]|
+|[header]|[icons]|[label]|
+|[maskedInput]|[radio]|[radioGroup]|
+|[requestButton]|[searchBar]|[select]|
+|[textField]|[switcher]|[textArea]|
 
-This project contains a library of react components created by our team.
 
+## Using the components
+
+1. From the command line inside of your project
+
+        npm install --save par-ui
+
+2. Import the component that you want to use
+
+  ```js
+  // es6
+  import { requestButton } from 'par-ui'
+  ```
+
+
+3. Use as if it was any other component
+
+  ```
+  render () {
+    return (
+      &lt;requestButton/&gt;
+    )
+  }
+   ```
+
+## Build
+1. From the command line inside of your project
+
+        npm run prod:build
 
 ## ESlint
 
@@ -35,16 +68,39 @@ to [create an issue][Issue], or better yet, [submit a [Pull Request][Pull]. For 
 information on contribution please see our [Contributing][Contrib] guide.
 
 ## License
-Copyright (c) 2017 Richard Rodger and other contributors;
+Copyright (c) 2018 Par 6 Tecnologia LTDA.  
 Licensed under __[Apache 2.0][Lic]__.
 
-[Lead]: https://github.com/laucsen
-[jhbalestrin]: https://github.com/jhbalestrin
-[tiago-pereira]: https://github.com/tiago-pereira
 [Lic]: ./LICENSE
-[Logo]: ./assets/par-mais-rect.png
+[Logo]: ./logo.png
 [Sponsor]: http://parmais.com.br
 [ParMaisTech]: http://parmais.com.br
 [Contrib]: ./CONTRIBUTE
-[Issue]: https://github.com/par-mais-tecnologia/par-ui/issues/new
-[Pull]: https://github.com/par-mais-tecnologia/par-ui/pulls
+[Issue]: https://github.com/par-mais-tecnologia/dynamito/issues/new
+[Pull]: https://github.com/par-mais-tecnologia/dynamito/pulls
+
+[avatar]: ./src/avatar
+[badge]: ./src/badge
+[button]: ./src/button
+[card]: ./src/card
+[checkbox]: ./src/checkbox
+[cnpjInput]: ./src/cnpjInput
+[cpfInput]: ./src/cpfInput
+[currencyInput]: ./src/currencyInput
+[dateInput]: ./src/dateInput
+[dateSelector]: ./src/dateSelector
+[elidedTextBox]: ./src/elidedTextBox
+[form]: ./src/form
+[header]: ./src/header
+[icons]: ./src/icons
+[label]: ./src/label
+[maskedInput]: ./src/maskedInput
+[radio]: ./src/radio
+[radioGroup]: ./src/radioGroup
+[requestButton]: ./src/requestButton
+[searchBar]: ./src/searchBar
+[select]: ./src/select
+[style]: ./src/style
+[switcher]: ./src/switcher
+[textArea]: ./src/textArea
+[textField]: ./src/textField
