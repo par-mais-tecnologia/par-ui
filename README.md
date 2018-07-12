@@ -71,7 +71,6 @@ information on contribution please see our [Contributing][Contrib] guide.
 Copyright (c) 2018 Par 6 Tecnologia LTDA.  
 Licensed under __[Apache 2.0][Lic]__.
 
-[Lead]: https://github.com/Laucsen
 [Lic]: ./LICENSE
 [Logo]: ./logo.png
 [Sponsor]: http://parmais.com.br
