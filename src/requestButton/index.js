@@ -7,7 +7,7 @@ class RequestButton extends Component {
     let style = `pallete-${pallete} `
 
     if (this.props.disabled || this.props.waiting) {
-      style += 'button-disabled-background gray-04 cursor-disabled disable-element-click'
+      style += 'button-disabled-background gray-04 cursor-disabled'
     } else if (this.props.primary) {
       style += `button-primary-background white b--${pallete}-02 bb pointer`
     } else if (this.props.secondary) {
