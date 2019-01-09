@@ -19,7 +19,7 @@ class Checkbox extends Component {
     const checkClassName = "check " + 
       (errorText ? 'error ' : '') +
       (disabled ? 'disabled ' : '')
-    const errorStyle = 'roboto-regular h1 p-f14 kitkat-01 p-ti-075'
+    const errorStyle = 'roboto-regular h1 p-f14 kitkat-01'
 
     const labelClassName = "roboto-regular p-f18 " + 
       (disabled ? 'gray-04' : 'gray-02')
