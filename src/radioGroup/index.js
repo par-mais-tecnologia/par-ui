@@ -20,7 +20,7 @@ class RadioGroup extends Component {
     let inputStyle = 'roboto-regular gray-02 h25 p-f18 input-text-indent-12 placeholder'
     let containerStyle = 'dif flex-column'
     let labelStyle = 'pl2 roboto-regular p-f14 gray-02'
-    let errorStyle = 'roboto-regular h1 p-f14 kitkat-01 p-ti-075'
+    let errorStyle = 'roboto-regular h1 p-f14 kitkat-01'
 
     if (this.props.disabled) {
       inputStyle = inputStyle.concat(' ', 'bg-gray-07 input-border-disabled cursor-disabled').replace('gray-02', 'gray-04')
