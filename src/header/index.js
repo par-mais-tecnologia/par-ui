@@ -3,18 +3,16 @@ import { Link } from 'react-router'
 import Avatar from '../avatar'
 
 class Header extends Component {
-
   getLogo(){
     if (!this.props.logo) {
-      return ''
+      return <div className="h25 w4" />
     }
 
     if (this.props.onLogoClick) {
       return (
-        <div onClick={() => this.props.onLogoClick()}>
+        <div className="flex items-center mr3" onClick={() => this.props.onLogoClick()}>
           <img
-            style={{'width': 150, cursor: this.props.cursor}}
-            className="h25 w4"
+            style={{ width: this.props.logoSize, cursor: this.props.cursor}}
             src={this.props.logo}
             alt={this.props.logoAlt}
           />
@@ -22,25 +20,19 @@ class Header extends Component {
       )
     }
 
-
     return (
-      <Link to={this.props.logoPath}>
+      <Link className="flex items-center mr3" to={this.props.logoPath}>
         <img
-          style={{'width': 150, cursor: this.props.cursor}}
-          className="h25 w4"
+          style={{ width: this.props.logoSize, cursor: this.props.cursor}}
           src={this.props.logo}
           alt={this.props.logoAlt}
         />
       </Link>
     )
-
   }
 
   render() {
     const {
-      logo,
-      logoPath,
-      logoAlt,
       label,
       isLogged,
       name,
@@ -53,9 +45,8 @@ class Header extends Component {
 
     return (
       <div className={headerClassName}>
-        <div className="flex flex-row">
+        <div className="flex flex-row items-center pl3">
           {this.getLogo()}
-          {(!logo) && <div className="h25 w4" />}
           <div className="roboto-light gray-01 p-f18 pt3">
             {label}
           </div>
@@ -85,6 +76,10 @@ Header.propTypes = {
   logo: PropTypes.string,
   logoAlt: PropTypes.string,
   logoPath: PropTypes.string,
+  logoSize: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   className: PropTypes.string,
   onLogoClick: PropTypes.func,
   onLogout: PropTypes.func,
@@ -98,6 +93,7 @@ Header.defaultProps = {
   isLogged: false,
   logoAlt: 'Default img alt',
   logoPath: '/',
+  logoSize: 112,
   onLogout: defaultLogout,
   className: '',
   cursor: 'pointer'
